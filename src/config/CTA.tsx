@@ -8,11 +8,11 @@
 export const ctaConfig = {
   // Profile image settings
   profileImage: '/assets/logo.png',
-  profileAlt: 'Profile',
+  profileAlt: 'Nibedan Pati',
 
   // CTA button settings
-  linkText: 'Book a Free Call',
-  calLink: 'ramxcodes/meeting',
+  linkText: 'Get in touch',
+  href: '/contact',
 
   // Pre-text message
   preText: "Hey, you scrolled this far, let's talk.",
