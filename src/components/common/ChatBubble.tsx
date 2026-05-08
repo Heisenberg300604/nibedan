@@ -33,10 +33,7 @@ const initialMessages: Message[] = [
     id: 1,
     text: "Hello! I'm Nibedan Pati's Portfolio Assistant. How can I help you?",
     sender: 'bot',
-    timestamp: new Date().toLocaleTimeString([], {
-      hour: '2-digit',
-      minute: '2-digit',
-    }),
+    timestamp: 'Just now',
   },
 ];
 

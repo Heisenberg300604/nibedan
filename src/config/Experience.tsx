@@ -1,22 +1,14 @@
-import AWS from '@/components/technologies/AWS';
-import BootStrap from '@/components/technologies/BootStrap';
-import Bun from '@/components/technologies/Bun';
 import CSS from '@/components/technologies/CSS';
-import ExpressJs from '@/components/technologies/ExpressJs';
 import Figma from '@/components/technologies/Figma';
+import Github from '@/components/technologies/Github';
 import Html from '@/components/technologies/Html';
 import JavaScript from '@/components/technologies/JavaScript';
-import MongoDB from '@/components/technologies/MongoDB';
-import NestJs from '@/components/technologies/NestJs';
+import MySQL from '@/components/technologies/MySQL';
 import NextJs from '@/components/technologies/NextJs';
-import NodeJs from '@/components/technologies/NodeJs';
-import PostgreSQL from '@/components/technologies/PostgreSQL';
-import Postman from '@/components/technologies/Postman';
-import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
-import TailwindCss from '@/components/technologies/TailwindCss';
+import ReactNative from '@/components/technologies/ReactNative';
+import Sass from '@/components/technologies/Sass';
 import TypeScript from '@/components/technologies/TypeScript';
-import Vercel from '@/components/technologies/Vercel';
 
 export interface Technology {
   name: string;
@@ -44,316 +36,109 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     isCurrent: true,
-    isBlur: true,
-    company: 'good day :3',
-    position: 'Founding Frontend Engineer',
-    location: 'United States (Remote)',
-    image: '/company/promote.png',
+    company: 'HiTouchCX',
+    position: 'Full Stack Developer Part-time / Contract',
+    location: 'Gurugram Sector 55-56',
+    image: '/company/hitouch.png',
     description: [
-      'Architected and developed the complete frontend infrastructure for the platform, a comprehensive solution for creating and managing promotional campaigns.',
-      'Led a comprehensive codebase refactoring initiative that improved maintainability, scalability, and development velocity across the entire platform.',
-      'Integrated and optimized backend API connections, implementing efficient data fetching strategies and error handling mechanisms.',
-      'Enhanced user experience and interface design through implementation of consistent design systems, accessibility standards, and performance optimizations.',
+      'Led end-to-end development of Reeboo8, a gig-work platform mobile application (React Native, Expo SDK 55, TypeScript) connecting agents with work opportunities; architected Auth Stack, tabbed Dashboard, Opportunities browser, Notifications feed, and Profile management screens using React Navigation v7.',
+      'Designed a scalable, maintainable project structure with per-screen StyleSheet files, a shared UI component library (AppHeader, SkeletonBox, StatusChip, EmptyState, SectionCard), and strict @/ path-alias conventions; also built and maintained full-stack web features for the company website.',
     ],
-    startDate: 'August 2025',
+    startDate: 'March 2026',
     endDate: 'Present',
     technologies: [
-      {
-        name: 'Next.js',
-        href: 'https://nextjs.org/',
-        icon: <NextJs />,
-      },
-      {
-        name: 'Tailwind CSS',
-        href: 'https://tailwindcss.com/',
-        icon: <TailwindCss />,
-      },
-      {
-        name: 'TypeScript',
-        href: 'https://typescriptlang.org/',
-        icon: <TypeScript />,
-      },
-      {
-        name: 'React',
-        href: 'https://react.dev/',
-        icon: <ReactIcon />,
-      },
-      {
-        name: 'Figma',
-        href: 'https://figma.com/',
-        icon: <Figma />,
-      },
-      {
-        name: 'Vercel',
-        href: 'https://vercel.com/',
-        icon: <Vercel />,
-      },
-      {
-        name: 'AWS',
-        href: 'https://aws.amazon.com/',
-        icon: <AWS />,
-      },
-      {
-        name: 'Postman',
-        href: 'https://www.postman.com/',
-        icon: <Postman />,
-      },
-      {
-        name: 'Bun',
-        href: 'https://bun.sh/',
-        icon: <Bun />,
-      },
+      { name: 'React Native', href: 'https://reactnative.dev/', icon: <ReactNative /> },
+      { name: 'TypeScript', href: 'https://typescriptlang.org/', icon: <TypeScript /> },
     ],
     website: '#',
-    github: '#',
-    x: '#',
   },
   {
     isCurrent: false,
-    company: 'Upsurge Labs',
-    position: 'Backend Developer Intern',
-    location: 'Bangalore, India (On-Site)',
-    image: '/company/upsurge.png',
+    company: 'NoBrokerage.com',
+    position: 'App Developer Intern',
+    location: 'Remote',
+    image: '/company/nobo.png',
     description: [
-      'Backend development for *Bhindi.io*, a flagship product of Upsurge Labs, focusing on core infrastructure and agent development.',
-      'Engineered and deployed multiple high-performance agents, enhancing product capabilities and user experience.',
-      'Testing agent functionality, authentication, automation, and system stability.',
-      'Streamlined development workflows by optimizing internal tools and maintaining detailed technical documentation.',
+      'Engineered a production-grade cross-platform mobile application from scratch using React Native (Expo) and TypeScript; implemented scalable state management with Zustand, responsive UI with NativeWind, RESTful API integrations, secure authentication flows, and deep-link navigation with Expo Router.',
+      'Delivered performance-optimized builds via EAS Build for both iOS and Android; additionally contributed to company web platform development using PHP, HTML, and CSS, collaborating across teams via Git and GitHub.',
+    ],
+    startDate: 'July 2025',
+    endDate: 'February 2026',
+    technologies: [
+      { name: 'React Native', href: 'https://reactnative.dev/', icon: <ReactNative /> },
+      { name: 'TypeScript', href: 'https://typescriptlang.org/', icon: <TypeScript /> },
+      { name: 'Figma', href: 'https://figma.com/', icon: <Figma /> },
+      { name: 'GitHub', href: 'https://github.com/', icon: <Github /> },
+      { name: 'MySQL', href: 'https://mysql.com/', icon: <MySQL /> },
+      { name: 'HTML', href: 'https://html.com/', icon: <Html /> },
+      { name: 'CSS', href: 'https://css.com/', icon: <CSS /> },
+      { name: 'JavaScript', href: 'https://javascript.com/', icon: <JavaScript /> },
+    ],
+    website: 'https://nobrokerage.com',
+  },
+  {
+    isCurrent: false,
+    company: 'Mappls MapMyIndia',
+    position: 'SWE Intern',
+    location: 'Remote Hybrid',
+    image: '/company/mappls.png',
+    description: [
+      'Worked on the Sanskriti app, identifying and fixing critical bugs and crashes to improve app stability and user experience.',
+      'Conducted comprehensive API testing to ensure app performance across different Android versions and device configurations.',
+      'Collaborated with the development team to debug and resolve issues in the existing codebase, enhancing overall app reliability.',
     ],
     startDate: 'June 2025',
-    endDate: 'July 2025',
+    endDate: 'September 2025',
     technologies: [
-      {
-        name: 'NestJS',
-        href: 'https://nestjs.com/',
-        icon: <NestJs />,
-      },
-      {
-        name: 'Postman',
-        href: 'https://www.postman.com/',
-        icon: <Postman />,
-      },
-      {
-        name: 'TypeScript',
-        href: 'https://www.typescriptlang.org/',
-        icon: <TypeScript />,
-      },
-      {
-        name: 'Express',
-        href: 'https://expressjs.com/',
-        icon: <ExpressJs />,
-      },
+      { name: 'React Native', href: 'https://reactnative.dev/', icon: <ReactNative /> },
+      { name: 'GitHub', href: 'https://github.com/', icon: <Github /> },
+      { name: 'Figma', href: 'https://figma.com/', icon: <Figma /> },
     ],
-    website: 'https://bhindi.io',
-    github: 'https://github.com/upsurgeio',
-    x: 'https://x.com/upsurgelabs',
-    linkedin: 'https://www.linkedin.com/company/upsurge-labs-pte-ltd',
+    website: 'https://mappls.com',
   },
   {
     isCurrent: false,
-    company: 'Prepeasy',
-    position: 'Founding Engineer',
-    location: 'Freelance',
-    image: '/company/prepeasy.png',
+    company: 'Eterna Infotech Pvt Ltd',
+    position: 'Web Developer Intern',
+    location: 'Remote',
+    image: '/company/eterna-info.png',
     description: [
-      'Independently architected and developed end-to-end full-stack solutions for core product features, resulting in 95% cost reduction in AI interview services.',
-      'Single-handedly engineered and deployed a scalable AI Interview Platform, implementing real-time leaderboard analytics and automated personalized interview feedback system, reducing per-session costs from *$7* to *$0.30*.',
-      'Designed and developed comprehensive AI Resume Builder with automated optimization features, increasing user engagement by generating tailored resume recommendations and industry-specific summaries.',
-      'Built and integrated an AI-powered Cover Letter Generator with customizable templates, improving user application success rates through personalized content generation.',
-      'Engineered a complete Learning Management System (LMS) with an integrated Quiz Platform, featuring progress tracking and performance analytics.',
+      'Enhanced MTS LMS website by improving both frontend and backend functionality using React, Sass, MUI, and MySQL.',
+      'Actively collaborated with cross-functional teams, resolving bugs, implementing new features, and conducting code reviews via Jira and GitHub.',
+      'Optimized APIs with Postman and MySQL Workbench, ensuring smooth data flow and improved system performance.',
     ],
-    startDate: 'April 2025',
-    endDate: 'June 2025',
+    startDate: 'November 2024',
+    endDate: 'March 2025',
     technologies: [
-      {
-        name: 'Next.js',
-        href: 'https://nextjs.org/',
-        icon: <NextJs />,
-      },
-      {
-        name: 'Express',
-        href: 'https://expressjs.com/',
-        icon: <ExpressJs />,
-      },
-      {
-        name: 'TypeScript',
-        href: 'https://www.typescriptlang.org/',
-        icon: <TypeScript />,
-      },
-      {
-        name: 'React',
-        href: 'https://react.dev/',
-        icon: <ReactIcon />,
-      },
-      {
-        name: 'Prisma',
-        href: 'https://www.prisma.io/',
-        icon: <Prisma />,
-      },
-      {
-        name: 'PostgreSQL',
-        href: 'https://www.postgresql.org/',
-        icon: <PostgreSQL />,
-      },
-      {
-        name: 'Vercel',
-        href: 'https://vercel.com/',
-        icon: <Vercel />,
-      },
-      {
-        name: 'AWS',
-        href: 'https://aws.amazon.com/',
-        icon: <AWS />,
-      },
-      {
-        name: 'Postman',
-        href: 'https://www.postman.com/',
-        icon: <Postman />,
-      },
-      {
-        name: 'Bun',
-        href: 'https://bun.sh/',
-        icon: <Bun />,
-      },
+      { name: 'React', href: 'https://react.dev/', icon: <ReactIcon /> },
+      { name: 'Sass', href: 'https://sass-lang.com/', icon: <Sass /> },
+      { name: 'MySQL', href: 'https://mysql.com/', icon: <MySQL /> },
+      { name: 'GitHub', href: 'https://github.com/', icon: <Github /> },
+      { name: 'Next.js', href: 'https://nextjs.org/', icon: <NextJs /> },
+      { name: 'JavaScript', href: 'https://javascript.com/', icon: <JavaScript /> },
     ],
-    website: 'https://prepeasy.ai',
-    github: 'https://github.com/prepeasy',
+    website: 'https://eternainfotech.com',
   },
   {
-    isCurrent: false,
-    company: 'Expelee',
-    position: 'SDE-1 (Full Stack) Intern',
-    location: 'Dubai, UAE (Remote)',
-    image: '/company/expelee.png',
+    isCurrent: true,
+    company: 'Geek Room & Namespace BPIT',
+    position: 'Open Source Contributor',
+    location: 'Remote',
+    image: '/company/geekroom.png',
     description: [
-      '*Riskmitra (riskmitra.com)*: Built full-stack product with Next.js, Tailwind CSS, Framer Motion, shadcn, wallet integration, and GitBook integration.',
-      '*Core AI (core-ai.me)*: Designed and developed with Next.js, Tailwind CSS, Framer Motion, shadcn, focusing on scalability and modular UI design.',
-      '*GPU AI (gpuai.me)*: Integrated Three.js for interactive 3D elements alongside full-stack features from Core AI setup.',
-      '*Altranium (gaming.altranium.com)*: Developed immersive gaming platform using Three.js, MERN, Tailwind, and Framer Motion.',
-      '*Pars Network (parsnetwork.me)*: Engineered landing experience with MERN, Tailwind CSS, and GSAP for advanced animations and transitions.',
-      '*TEQ Network (teq-network.vercel.app)*: Designed and developed landing page using MERN, Tailwind CSS, and Web3 wallet integration.',
+      'Developed responsive React pages for both mobile and desktop views, collaborating with Figma for UI design.',
+      'Contributed to the Geek Room community Pears hackathon website by enhancing functionality.',
+      'Identified, troubleshot, and fixed open issues on the Namespace GitHub repository, improving overall platform performance and user engagement.',
     ],
-    startDate: 'Aug 2023',
-    endDate: 'April 2025',
+    startDate: 'November 2024',
+    endDate: 'Present',
     technologies: [
-      {
-        name: 'Bun',
-        href: 'https://bun.sh/',
-        icon: <Bun />,
-      },
-      {
-        name: 'Express',
-        href: 'https://expressjs.com/',
-        icon: <ExpressJs />,
-      },
-      {
-        name: 'Figma',
-        href: 'https://figma.com/',
-        icon: <Figma />,
-      },
-      {
-        name: 'JavaScript',
-        href: 'https://javascript.com/',
-        icon: <JavaScript />,
-      },
-      {
-        name: 'MongoDB',
-        href: 'https://mongodb.com/',
-        icon: <MongoDB />,
-      },
-      {
-        name: 'Next.js',
-        href: 'https://nextjs.org/',
-        icon: <NextJs />,
-      },
-      {
-        name: 'Node.js',
-        href: 'https://nodejs.org/',
-        icon: <NodeJs />,
-      },
-      {
-        name: 'PostgreSQL',
-        href: 'https://postgresql.org/',
-        icon: <PostgreSQL />,
-      },
-      {
-        name: 'Prisma',
-        href: 'https://prisma.io/',
-        icon: <Prisma />,
-      },
-      {
-        name: 'React',
-        href: 'https://react.dev/',
-        icon: <ReactIcon />,
-      },
-      {
-        name: 'TypeScript',
-        href: 'https://typescriptlang.org/',
-        icon: <TypeScript />,
-      },
-      {
-        name: 'Postman',
-        href: 'https://postman.com/',
-        icon: <Postman />,
-      },
-      {
-        name: 'Vercel',
-        href: 'https://vercel.com/',
-        icon: <Vercel />,
-      },
-      {
-        name: 'AWS',
-        href: 'https://aws.amazon.com/',
-        icon: <AWS />,
-      },
+      { name: 'React', href: 'https://react.dev/', icon: <ReactIcon /> },
+      { name: 'GitHub', href: 'https://github.com/', icon: <Github /> },
+      { name: 'Figma', href: 'https://figma.com/', icon: <Figma /> },
+      { name: 'Next.js', href: 'https://nextjs.org/', icon: <NextJs /> },
     ],
-    website: 'https://expelee.com',
-    x: 'https://x.com/0xExpelee',
-    linkedin: 'https://www.linkedin.com/company/expelee',
-    github: 'https://github.com/expeleeOfficial',
-  },
-  {
-    isCurrent: false,
-    company: 'Flameloop',
-    position: 'Junior Frontend Developer',
-    location: 'Indore, India (offline)',
-    image: '/company/loop.png',
-    description: [
-      'Developed and maintained web applications using HTML, CSS, and JavaScript.',
-      'Collaborated with cross-functional teams to deliver high-quality software on time.',
-      'Design & Developed multiple websites for clients.',
-    ],
-    startDate: 'June 2023',
-    endDate: 'July 2023',
-    website: 'https://flameloop.com',
-    technologies: [
-      {
-        name: 'HTML',
-        href: 'https://html.com/',
-        icon: <Html />,
-      },
-      {
-        name: 'CSS',
-        href: 'https://css.com/',
-        icon: <CSS />,
-      },
-      {
-        name: 'JavaScript',
-        href: 'https://javascript.com/',
-        icon: <JavaScript />,
-      },
-      {
-        name: 'Figma',
-        href: 'https://figma.com/',
-        icon: <Figma />,
-      },
-      {
-        name: 'BootStrap',
-        href: 'https://getbootstrap.com/',
-        icon: <BootStrap />,
-      },
-    ],
-    x: 'https://x.com/Flameloop149578',
-    linkedin: 'https://www.linkedin.com/company/flameloop',
+    website: 'https://geekroom.in',
+    github: 'https://github.com/Heisenberg300604',
   },
 ];

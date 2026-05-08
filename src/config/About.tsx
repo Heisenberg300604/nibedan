@@ -1,26 +1,22 @@
-import Bun from '@/components/technologies/Bun';
-import JavaScript from '@/components/technologies/JavaScript';
 import MongoDB from '@/components/technologies/MongoDB';
+import MySQL from '@/components/technologies/MySQL';
 import NextJs from '@/components/technologies/NextJs';
 import NodeJs from '@/components/technologies/NodeJs';
-import PostgreSQL from '@/components/technologies/PostgreSQL';
-import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
+import ReactNative from '@/components/technologies/ReactNative';
 import TypeScript from '@/components/technologies/TypeScript';
 
 export const mySkills = [
   <ReactIcon key="react" />,
-  <Bun key="bun" />,
-  <JavaScript key="javascript" />,
-  <TypeScript key="typescript" />,
-  <MongoDB key="mongodb" />,
   <NextJs key="nextjs" />,
+  <ReactNative key="react-native" />,
+  <TypeScript key="typescript" />,
   <NodeJs key="nodejs" />,
-  <PostgreSQL key="postgresql" />,
-  <Prisma key="prisma" />,
+  <MongoDB key="mongodb" />,
+  <MySQL key="mysql" />,
 ];
 
 export const about = {
   name: 'Nibedan Pati',
-  description: `I'm Nibedan Pati, a Full Stack web developer and Open Source Contributor. I love building products to solve real-world problems and specialize in building MVPs.`,
+  description: `I build full-stack web and mobile apps using React, Next.js, React Native, TypeScript and Node.js. 5x Hackathon Winner · SIH Grand Finalist · Open Source Contributor.`,
 };

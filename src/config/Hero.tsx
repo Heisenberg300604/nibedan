@@ -23,19 +23,19 @@
  *
  * That's it! Your portfolio will automatically update with your information.
  */
+import Codolio from '@/components/svgs/Codolio';
 import Github from '@/components/svgs/Github';
+import Instagram from '@/components/svgs/Instagram';
+import LeetCodeIcon from '@/components/svgs/LeetCode';
 import LinkedIn from '@/components/svgs/LinkedIn';
 import Mail from '@/components/svgs/Mail';
 import X from '@/components/svgs/X';
-import Bun from '@/components/technologies/Bun';
-import JavaScript from '@/components/technologies/JavaScript';
+import YouTube from '@/components/svgs/YouTube';
 import MongoDB from '@/components/technologies/MongoDB';
 import NextJs from '@/components/technologies/NextJs';
 import NodeJs from '@/components/technologies/NodeJs';
-import PostgreSQL from '@/components/technologies/PostgreSQL';
-import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
-// Technology Components
+import ReactNative from '@/components/technologies/ReactNative';
 import TypeScript from '@/components/technologies/TypeScript';
 
 // Component mapping for skills
@@ -43,27 +43,19 @@ export const skillComponents = {
   TypeScript: TypeScript,
   ReactIcon: ReactIcon,
   NextJs: NextJs,
-  Bun: Bun,
-  PostgreSQL: PostgreSQL,
+  ReactNative: ReactNative,
   NodeJs: NodeJs,
   MongoDB: MongoDB,
-  Prisma: Prisma,
-  JavaScript: JavaScript,
 };
 
 export const heroConfig = {
   // Personal Information
   name: 'Nibedan Pati',
-  title: 'A Full Stack web developer.',
+  title: 'Full Stack & Mobile Developer.',
   avatar: '/assets/logo.png',
 
   // Skills Configuration
   skills: [
-    {
-      name: 'Typescript',
-      href: 'https://www.typescriptlang.org/',
-      component: 'TypeScript',
-    },
     {
       name: 'React',
       href: 'https://react.dev/',
@@ -75,29 +67,40 @@ export const heroConfig = {
       component: 'NextJs',
     },
     {
-      name: 'Bun',
-      href: 'https://bun.sh/',
-      component: 'Bun',
+      name: 'React Native',
+      href: 'https://reactnative.dev/',
+      component: 'ReactNative',
     },
     {
-      name: 'PostgreSQL',
-      href: 'https://www.postgresql.org/',
-      component: 'PostgreSQL',
+      name: 'TypeScript',
+      href: 'https://www.typescriptlang.org/',
+      component: 'TypeScript',
+    },
+    {
+      name: 'Node.js',
+      href: 'https://nodejs.org/',
+      component: 'NodeJs',
     },
   ],
 
   // Description Configuration
   description: {
     template:
-      'I build interactive web apps using {skills:0}, {skills:1}, {skills:2}, {skills:3} and {skills:4}. With a focus on <b>UI</b> design. Enthusiastic about <b>Three.js</b>, driven by a keen eye for design.',
+      'I build full-stack web and mobile apps using {skills:0}, {skills:1}, {skills:2}, {skills:3} and {skills:4}. <b>5x Hackathon Winner</b> · <b>SIH Grand Finalist</b> · Open Source Contributor.',
   },
 
   // Buttons Configuration
   buttons: [
     {
       variant: 'outline',
+      text: 'Buy me a Coffee',
+      href: 'https://buymeacoffee.com/nibedanpati',
+      icon: 'Coffee',
+    },
+    {
+      variant: 'outline',
       text: 'Resume / CV',
-      href: '/resume',
+      href: 'https://drive.google.com/file/d/1ormIiMVpWGAMOZ3FZVj_XrKPkEmPlPQj/preview',
       icon: 'CV',
     },
     {
@@ -112,9 +115,9 @@ export const heroConfig = {
 // Social Links Configuration
 export const socialLinks = [
   {
-    name: 'X',
-    href: 'https://x.com/ItsHeisenberg04',
-    icon: <X />,
+    name: 'GitHub',
+    href: 'https://github.com/Heisenberg300604',
+    icon: <Github />,
   },
   {
     name: 'LinkedIn',
@@ -122,9 +125,29 @@ export const socialLinks = [
     icon: <LinkedIn />,
   },
   {
-    name: 'Github',
-    href: 'https://github.com/Heisenberg300604',
-    icon: <Github />,
+    name: 'X (Twitter)',
+    href: 'https://x.com/ItsHeisenberg04',
+    icon: <X />,
+  },
+  {
+    name: 'LeetCode',
+    href: 'https://leetcode.com/u/Nibedan/',
+    icon: <LeetCodeIcon />,
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@Heisenberg3006-y0',
+    icon: <YouTube />,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/',
+    icon: <Instagram />,
+  },
+  {
+    name: 'Codolio',
+    href: 'https://codolio.com/profile/Heisenberg300604',
+    icon: <Codolio />,
   },
   {
     name: 'Email',
