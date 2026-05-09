@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import SectionHeading from '../common/SectionHeading';
+import Container from '../common/Container';
 import LeetCodeIcon from '../svgs/LeetCode';
 
 interface LeetCodeData {
@@ -62,9 +62,30 @@ const LeetCodeSection = () => {
   }
 
   return (
-    <section className="mt-20">
-      <SectionHeading subHeading="LeetCode" heading="Activity" />
-      <div className="flex flex-col gap-6 mt-8 rounded-2xl border border-border/50 bg-secondary/10 p-6 md:flex-row md:items-start">
+    <Container className="mt-20">
+      <div className="space-y-6">
+        {/* Header */}
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-foreground text-2xl font-bold">
+              LeetCode Activity
+            </h2>
+            <p className="text-muted-foreground text-sm">
+              <b>{data.username || 'Nibedan'}</b>&apos;s submissions
+            </p>
+            {data.stats && (
+              <p className="text-primary mt-1 text-sm font-medium">
+                Total:{' '}
+                <span className="font-black">
+                  {data.stats.totalSolved.toLocaleString()}
+                </span>{' '}
+                problems solved
+              </p>
+            )}
+          </div>
+        </div>
+
+      <div className="flex flex-col gap-6 rounded-2xl border border-border/50 bg-secondary/10 p-6 md:flex-row md:items-start">
         {/* Left Side: Stats */}
         <div className="flex flex-col gap-4 md:w-1/3">
           <div className="flex items-center gap-3">
@@ -138,7 +159,8 @@ const LeetCodeSection = () => {
           </div>
         </div>
       </div>
-    </section>
+      </div>
+    </Container>
   );
 };
 

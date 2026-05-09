@@ -94,13 +94,13 @@ export const heroConfig = {
     {
       variant: 'outline',
       text: 'Buy me a Coffee',
-      href: 'https://buymeacoffee.com/nibedanpati',
+      href: 'https://buymeacoffee.com/heisenberg300604',
       icon: 'Coffee',
     },
     {
       variant: 'outline',
       text: 'Resume / CV',
-      href: 'https://drive.google.com/file/d/1ormIiMVpWGAMOZ3FZVj_XrKPkEmPlPQj/preview',
+      href: 'https://resumenibedanpati.tiiny.site',
       icon: 'CV',
     },
     {

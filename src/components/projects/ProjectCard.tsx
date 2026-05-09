@@ -83,6 +83,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                     className="text-secondary hover:text-primary flex size-6 items-center justify-center transition-colors"
                     href={project.link}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Website />
                   </Link>
@@ -98,6 +99,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                       className="text-secondary hover:text-primary flex size-6 items-center justify-center transition-colors"
                       href={project.github}
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Github />
                     </Link>
