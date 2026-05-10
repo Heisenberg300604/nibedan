@@ -18,7 +18,6 @@ export const projects: Project[] = [
     description:
       '500+ downloads. Cross-platform book marketplace for competitive exam prep — Supabase backend with RLS, geolocation-based search, and EAS production builds.',
     image: '/project/pustakhub.png',
-    link: '#',
     technologies: [
       { name: 'React Native', icon: <ReactNative key="rn" /> },
       { name: 'TypeScript', icon: <TypeScript key="ts" /> },
@@ -26,17 +25,16 @@ export const projects: Project[] = [
       { name: 'Vercel', icon: <Vercel key="vercel" /> },
     ],
     github: 'https://github.com/Heisenberg300604/PustakHub',
-    live: '#',
     details: true,
     projectDetailsPageSlug: '/projects/pustakhub',
     isWorking: true,
+    statusLabel: 'Completed',
   },
   {
     title: 'Taply',
     description:
       'Digital business card platform — QR codes auto-sync in real time when your profile changes. Built with Supabase Realtime, Expo Router, and native share sheets.',
     image: '/project/taply.png',
-    link: '#',
     technologies: [
       { name: 'React Native', icon: <ReactNative key="rn" /> },
       { name: 'TypeScript', icon: <TypeScript key="ts" /> },
@@ -44,10 +42,10 @@ export const projects: Project[] = [
       { name: 'Node.js', icon: <NodeJs key="node" /> },
     ],
     github: 'https://github.com/Heisenberg300604/Taply',
-    live: '#',
     details: true,
     projectDetailsPageSlug: '/projects/taply',
     isWorking: true,
+    statusLabel: 'Completed',
   },
   {
     title: 'Recap — AI Study Companion',
@@ -66,6 +64,7 @@ export const projects: Project[] = [
     details: true,
     projectDetailsPageSlug: '/projects/recap',
     isWorking: true,
+    statusLabel: 'Deployed',
   },
   {
     title: 'BudgetMap — Expense Tracker',
@@ -84,6 +83,7 @@ export const projects: Project[] = [
     details: true,
     projectDetailsPageSlug: '/projects/budgetmap',
     isWorking: true,
+    statusLabel: 'Deployed',
   },
   {
     title: 'Signal-X — AI Traffic Management',
@@ -102,6 +102,7 @@ export const projects: Project[] = [
     details: false,
     projectDetailsPageSlug: '/projects/signal-x',
     isWorking: true,
+    statusLabel: 'Deployed',
   },
   {
     title: 'Flox — Social Media Platform',
@@ -120,6 +121,7 @@ export const projects: Project[] = [
     details: false,
     projectDetailsPageSlug: '/projects/flox',
     isWorking: true,
+    statusLabel: 'Deployed',
   },
   {
     title: 'Zap-URL — URL Shortening Service',
@@ -138,6 +140,7 @@ export const projects: Project[] = [
     details: false,
     projectDetailsPageSlug: '/projects/zapurl',
     isWorking: true,
+    statusLabel: 'Operational',
   },
   {
     title: 'create-expo-starter — NPM Package',
@@ -155,6 +158,7 @@ export const projects: Project[] = [
     details: false,
     projectDetailsPageSlug: '/projects/create-expo-starter',
     isWorking: true,
+    statusLabel: 'Published',
   },
   {
     title: 'EchoChat — Real-time Communication',
@@ -173,6 +177,7 @@ export const projects: Project[] = [
     details: false,
     projectDetailsPageSlug: '/projects/echochat',
     isWorking: true,
+    statusLabel: 'Deployed',
   },
   {
     title: 'Athleto — Empowering Athletes',
@@ -191,6 +196,7 @@ export const projects: Project[] = [
     details: false,
     projectDetailsPageSlug: '/projects/athleto',
     isWorking: true,
+    statusLabel: 'Deployed',
   },
   {
     title: 'Travello — Gamified Tourism',
@@ -209,5 +215,6 @@ export const projects: Project[] = [
     details: false,
     projectDetailsPageSlug: '/projects/travello',
     isWorking: true,
+    statusLabel: 'Deployed',
   },
 ];

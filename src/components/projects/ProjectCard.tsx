@@ -77,21 +77,23 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </h3>
             </Link>
             <div className="flex items-center gap-2">
-              <Tooltip>
-                <TooltipTrigger>
-                  <Link
-                    className="text-secondary hover:text-primary flex size-6 items-center justify-center transition-colors"
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Website />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>View Website</p>
-                </TooltipContent>
-              </Tooltip>
+              {project.link && project.link !== '#' && (
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Link
+                      className="text-secondary hover:text-primary flex size-6 items-center justify-center transition-colors"
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Website />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>View Website</p>
+                  </TooltipContent>
+                </Tooltip>
+              )}
               <Tooltip>
                 <TooltipTrigger>
                   {project.github && (
@@ -150,7 +152,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             {project.isWorking ? (
               <>
                 <div className="size-2 animate-pulse rounded-full bg-green-500" />
-                All Systems Operational
+                {project.statusLabel || 'Operational'}
               </>
             ) : (
               <>
