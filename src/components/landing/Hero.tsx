@@ -152,7 +152,11 @@ export default function Hero() {
                 href={link.href}
                 key={link.name}
                 target={link.href.startsWith('http') ? '_blank' : undefined}
-                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                rel={
+                  link.href.startsWith('http')
+                    ? 'noopener noreferrer'
+                    : undefined
+                }
                 className="text-secondary flex items-center gap-2"
               >
                 <span className="size-6">{link.icon}</span>

@@ -26,7 +26,13 @@ interface LeetCodeStats {
   activeBadge: { displayName: string } | null;
 }
 
-function AnimatedNumber({ value, duration = 1200 }: { value: number; duration?: number }) {
+function AnimatedNumber({
+  value,
+  duration = 1200,
+}: {
+  value: number;
+  duration?: number;
+}) {
   const [displayed, setDisplayed] = useState(0);
   const startRef = useRef<number | null>(null);
   const rafRef = useRef<number | null>(null);
@@ -66,7 +72,9 @@ function StatCard({
 }) {
   return (
     <div className="flex flex-col gap-1 rounded-lg border border-border bg-card p-4 transition-all duration-300 hover:border-border/80 hover:shadow-sm">
-      <p className="text-secondary text-xs uppercase tracking-widest">{label}</p>
+      <p className="text-secondary text-xs uppercase tracking-widest">
+        {label}
+      </p>
       <p className={`text-3xl font-bold ${color}`}>
         <AnimatedNumber value={value} />
       </p>
@@ -127,7 +135,9 @@ export default function LeetCodeStats() {
   if (loading) {
     return (
       <div className="flex min-h-[200px] items-center justify-center">
-        <div className="text-secondary text-sm animate-pulse">Loading LeetCode stats...</div>
+        <div className="text-secondary text-sm animate-pulse">
+          Loading LeetCode stats...
+        </div>
       </div>
     );
   }
@@ -165,7 +175,9 @@ export default function LeetCodeStats() {
           <div>
             <p className="font-semibold">{stats.username}</p>
             {profile.ranking && (
-              <p className="text-secondary text-xs">Global Rank #{profile.ranking.toLocaleString()}</p>
+              <p className="text-secondary text-xs">
+                Global Rank #{profile.ranking.toLocaleString()}
+              </p>
             )}
           </div>
         </div>
@@ -210,9 +222,24 @@ export default function LeetCodeStats() {
       <div className="rounded-lg border border-border bg-card p-4">
         <h4 className="mb-4 text-sm font-semibold">Problem Breakdown</h4>
         <div className="flex flex-col gap-4">
-          <DifficultyBar label="Easy" solved={s.easySolved} total={s.totalEasy} color="text-green-500" />
-          <DifficultyBar label="Medium" solved={s.mediumSolved} total={s.totalMedium} color="text-yellow-500" />
-          <DifficultyBar label="Hard" solved={s.hardSolved} total={s.totalHard} color="text-red-500" />
+          <DifficultyBar
+            label="Easy"
+            solved={s.easySolved}
+            total={s.totalEasy}
+            color="text-green-500"
+          />
+          <DifficultyBar
+            label="Medium"
+            solved={s.mediumSolved}
+            total={s.totalMedium}
+            color="text-yellow-500"
+          />
+          <DifficultyBar
+            label="Hard"
+            solved={s.hardSolved}
+            total={s.totalHard}
+            color="text-red-500"
+          />
         </div>
       </div>
 
@@ -238,14 +265,18 @@ export default function LeetCodeStats() {
             {contest.topPercentage && (
               <div>
                 <p className="text-secondary text-xs">Top</p>
-                <p className="text-xl font-bold">{contest.topPercentage.toFixed(1)}%</p>
+                <p className="text-xl font-bold">
+                  {contest.topPercentage.toFixed(1)}%
+                </p>
               </div>
             )}
           </div>
         </div>
       )}
 
-      <p className="text-secondary text-center text-xs">Stats updated hourly via LeetCode API</p>
+      <p className="text-secondary text-center text-xs">
+        Stats updated hourly via LeetCode API
+      </p>
     </div>
   );
 }

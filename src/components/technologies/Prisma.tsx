@@ -1,10 +1,30 @@
-export default function Prisma() {
+import React from 'react';
+
+export default function Prisma({
+  className = '',
+  ...props
+}: React.SVGProps<SVGSVGElement> & { className?: string }) {
   return (
-    <svg viewBox="0 0 128 128">
-      <path
-        fill="#2d3748"
-        d="M66.457.014a6.308 6.308 0 0 0-5.812 3.028l-47.87 78.072a6.379 6.379 0 0 0 .048 6.748l23.568 37.186a6.387 6.387 0 0 0 7.22 2.683l68.012-20.407a6.37 6.37 0 0 0 3.96-8.765l-43.72-94.85A6.298 6.298 0 0 0 66.46.014Zm1.795 23.95a2.348 2.348 0 0 1 2.448 1.433l30.16 69.784a2.39 2.39 0 0 1-1.512 3.241l-46.996 14.024a2.39 2.39 0 0 1-3.024-2.76l16.83-83.812a2.353 2.353 0 0 1 2.099-1.91z"
-      ></path>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 100 100"
+      className={`transition-all duration-300 ${className}`}
+      {...props}
+    >
+      <g clipPath="url(#a)">
+        <path
+          fill="currentColor"
+          fillRule="evenodd"
+          d="M9.774 68.638a4.98 4.98 0 0 1-.04-5.268L47.126 2.376c2.08-3.392 7.102-3.096 8.768.518l34.159 74.1a4.98 4.98 0 0 1-3.092 6.853L33.824 99.79a4.98 4.98 0 0 1-5.637-2.104zM51.44 20.21c.36-1.794 2.819-2.053 3.545-.373L78.548 74.36a1.868 1.868 0 0 1-1.18 2.53L40.653 87.85a1.867 1.867 0 0 1-2.365-2.157z"
+          clipRule="evenodd"
+        />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M0 0h100v100H0z" />
+        </clipPath>
+      </defs>
     </svg>
   );
 }

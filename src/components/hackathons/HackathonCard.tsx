@@ -32,7 +32,15 @@ function RankIcon({ rank }: { rank: string }) {
   }
   // Grand Finalist — trophy cup
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-3.5">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="size-3.5"
+    >
       <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
       <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
       <path d="M4 22h16" />
@@ -52,7 +60,9 @@ const rankLabel: Record<string, string> = {
 
 export function HackathonCard({ hackathon }: HackathonCardProps) {
   const rank = hackathon.rank ?? '';
-  const colorClass = rankColors[rank] ?? 'text-neutral-400 border-neutral-400/30 bg-neutral-400/10';
+  const colorClass =
+    rankColors[rank] ??
+    'text-neutral-400 border-neutral-400/30 bg-neutral-400/10';
   const label = rankLabel[rank] ?? hackathon.achievement;
 
   return (
@@ -60,7 +70,9 @@ export function HackathonCard({ hackathon }: HackathonCardProps) {
       {/* Header */}
       <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex flex-col gap-1">
-          <h3 className="text-lg font-bold leading-tight">{hackathon.eventName}</h3>
+          <h3 className="text-lg font-bold leading-tight">
+            {hackathon.eventName}
+          </h3>
           <p className="text-secondary text-sm">{hackathon.date}</p>
           {hackathon.venue && (
             <p className="text-secondary text-xs">📍 {hackathon.venue}</p>
@@ -75,12 +87,16 @@ export function HackathonCard({ hackathon }: HackathonCardProps) {
       </div>
 
       {/* Description */}
-      <p className="text-secondary text-sm leading-relaxed">{hackathon.description}</p>
+      <p className="text-secondary text-sm leading-relaxed">
+        {hackathon.description}
+      </p>
 
       {/* Project */}
       <div className="rounded-md border border-border/60 bg-background/50 p-4">
         <h4 className="mb-1 text-sm font-semibold">{hackathon.project.name}</h4>
-        <p className="text-secondary text-xs leading-relaxed">{hackathon.project.description}</p>
+        <p className="text-secondary text-xs leading-relaxed">
+          {hackathon.project.description}
+        </p>
         {hackathon.project.impact && (
           <p className="text-secondary mt-2 text-xs italic opacity-80">
             ↳ {hackathon.project.impact}

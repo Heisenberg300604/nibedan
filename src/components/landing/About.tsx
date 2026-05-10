@@ -20,7 +20,9 @@ export default function About() {
         />
         <div className="flex-1">
           <h3 className="text-2xl font-bold">{about.name}</h3>
-          <p className="text-secondary mt-4 text-lg leading-relaxed">{about.description}</p>
+          <p className="text-secondary mt-4 text-lg leading-relaxed">
+            {about.description}
+          </p>
         </div>
       </div>
     </Container>

@@ -44,7 +44,7 @@ export async function GET() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Referer': 'https://leetcode.com',
+        Referer: 'https://leetcode.com',
       },
       body: JSON.stringify({
         query: USER_STATS_QUERY,
@@ -72,13 +72,31 @@ export async function GET() {
     }
 
     const acSubmissions = matchedUser.submitStats?.acSubmissionNum ?? [];
-    const totalSolved = acSubmissions.find((s: { difficulty: string }) => s.difficulty === 'All')?.count ?? 0;
-    const easySolved = acSubmissions.find((s: { difficulty: string }) => s.difficulty === 'Easy')?.count ?? 0;
-    const mediumSolved = acSubmissions.find((s: { difficulty: string }) => s.difficulty === 'Medium')?.count ?? 0;
-    const hardSolved = acSubmissions.find((s: { difficulty: string }) => s.difficulty === 'Hard')?.count ?? 0;
-    const totalEasy = allQuestionsCount?.find((q: { difficulty: string }) => q.difficulty === 'Easy')?.count ?? 0;
-    const totalMedium = allQuestionsCount?.find((q: { difficulty: string }) => q.difficulty === 'Medium')?.count ?? 0;
-    const totalHard = allQuestionsCount?.find((q: { difficulty: string }) => q.difficulty === 'Hard')?.count ?? 0;
+    const totalSolved =
+      acSubmissions.find((s: { difficulty: string }) => s.difficulty === 'All')
+        ?.count ?? 0;
+    const easySolved =
+      acSubmissions.find((s: { difficulty: string }) => s.difficulty === 'Easy')
+        ?.count ?? 0;
+    const mediumSolved =
+      acSubmissions.find(
+        (s: { difficulty: string }) => s.difficulty === 'Medium',
+      )?.count ?? 0;
+    const hardSolved =
+      acSubmissions.find((s: { difficulty: string }) => s.difficulty === 'Hard')
+        ?.count ?? 0;
+    const totalEasy =
+      allQuestionsCount?.find(
+        (q: { difficulty: string }) => q.difficulty === 'Easy',
+      )?.count ?? 0;
+    const totalMedium =
+      allQuestionsCount?.find(
+        (q: { difficulty: string }) => q.difficulty === 'Medium',
+      )?.count ?? 0;
+    const totalHard =
+      allQuestionsCount?.find(
+        (q: { difficulty: string }) => q.difficulty === 'Hard',
+      )?.count ?? 0;
 
     // Parse submission calendar (unix timestamp -> count map)
     let submissionCalendar: Record<string, number> = {};

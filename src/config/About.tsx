@@ -18,5 +18,5 @@ export const mySkills = [
 
 export const about = {
   name: 'Nibedan Pati',
-  description: `I build full-stack web and mobile apps using React, Next.js, React Native, TypeScript and Node.js. 5x Hackathon Winner · SIH Grand Finalist · Open Source Contributor.`,
+  description: ` Full-stack and mobile developer building production-grade products people actually use. Ex-Mappls intern with experience across product startups, currently sharpening my DSA fundamentals and exploring AI/ML. I'm not chasing frameworks — I'm chasing the kind of problem-solving that makes you a better engineer regardless of the tool.`,
 };

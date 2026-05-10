@@ -51,7 +51,7 @@ export const skillComponents = {
 export const heroConfig = {
   // Personal Information
   name: 'Nibedan Pati',
-  title: 'Full Stack & Mobile Developer.',
+  title: 'I build full-stack web and mobile apps that solve real problems.',
   avatar: '/assets/logo.png',
 
   // Skills Configuration
@@ -86,7 +86,7 @@ export const heroConfig = {
   // Description Configuration
   description: {
     template:
-      'I build full-stack web and mobile apps using {skills:0}, {skills:1}, {skills:2}, {skills:3} and {skills:4}. <b>5x Hackathon Winner</b> · <b>SIH Grand Finalist</b> · Open Source Contributor.',
+      'I build full-stack web and mobile apps — {skills:2}, {skills:1}, {skills:4} and whatever the problem calls for. Currently sharpening my DSA fundamentals and exploring AI/ML. <b>5x Hackathon Winner</b> · <b>SIH Grand Finalist</b> · <b>Open Source Contributor</b>.',
   },
 
   // Buttons Configuration

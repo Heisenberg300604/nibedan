@@ -1,13 +1,18 @@
 import CSS from '@/components/technologies/CSS';
+import ExpressJs from '@/components/technologies/ExpressJs';
 import Figma from '@/components/technologies/Figma';
 import Github from '@/components/technologies/Github';
 import Html from '@/components/technologies/Html';
 import JavaScript from '@/components/technologies/JavaScript';
 import MySQL from '@/components/technologies/MySQL';
 import NextJs from '@/components/technologies/NextJs';
+import NodeJs from '@/components/technologies/NodeJs';
+import PostgreSQL from '@/components/technologies/PostgreSQL';
+import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
 import ReactNative from '@/components/technologies/ReactNative';
 import Sass from '@/components/technologies/Sass';
+import Supabase from '@/components/technologies/Supabase';
 import TypeScript from '@/components/technologies/TypeScript';
 
 export interface Technology {
@@ -24,7 +29,7 @@ export interface Experience {
   description: string[];
   startDate: string;
   endDate: string;
-  website: string;
+  website?: string;
   x?: string;
   linkedin?: string;
   github?: string;
@@ -35,22 +40,48 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    isCurrent: true,
+    isCurrent: false,
     company: 'HiTouchCX',
-    position: 'Full Stack Developer Part-time / Contract',
+    position: 'Full Stack Developer Intern',
     location: 'Gurugram Sector 55-56',
     image: '/company/hitouch.png',
     description: [
       'Led end-to-end development of Reeboo8, a gig-work platform mobile application (React Native, Expo SDK 55, TypeScript) connecting agents with work opportunities; architected Auth Stack, tabbed Dashboard, Opportunities browser, Notifications feed, and Profile management screens using React Navigation v7.',
       'Designed a scalable, maintainable project structure with per-screen StyleSheet files, a shared UI component library (AppHeader, SkeletonBox, StatusChip, EmptyState, SectionCard), and strict @/ path-alias conventions; also built and maintained full-stack web features for the company website.',
+      'Successfully delivered AI integration features, enhancing the overall functionality and capabilities of the platform.',
     ],
-    startDate: 'March 2026',
-    endDate: 'Present',
+    startDate: 'February 2026',
+    endDate: 'March 2026',
     technologies: [
-      { name: 'React Native', href: 'https://reactnative.dev/', icon: <ReactNative /> },
-      { name: 'TypeScript', href: 'https://typescriptlang.org/', icon: <TypeScript /> },
+      { name: 'Supabase', href: 'https://supabase.com/', icon: <Supabase /> },
+      {
+        name: 'React Native',
+        href: 'https://reactnative.dev/',
+        icon: <ReactNative />,
+      },
+      {
+        name: 'TypeScript',
+        href: 'https://typescriptlang.org/',
+        icon: <TypeScript />,
+      },
+      {
+        name: 'JavaScript',
+        href: 'https://javascript.com/',
+        icon: <JavaScript />,
+      },
+      { name: 'Prisma', href: 'https://prisma.io/', icon: <Prisma /> },
+      {
+        name: 'Express.js',
+        href: 'https://expressjs.com/',
+        icon: <ExpressJs />,
+      },
+      { name: 'Node.js', href: 'https://nodejs.org/', icon: <NodeJs /> },
+      {
+        name: 'PostgreSQL',
+        href: 'https://postgresql.org/',
+        icon: <PostgreSQL />,
+      },
     ],
-    website: '#',
   },
   {
     isCurrent: false,
@@ -65,14 +96,26 @@ export const experiences: Experience[] = [
     startDate: 'July 2025',
     endDate: 'February 2026',
     technologies: [
-      { name: 'React Native', href: 'https://reactnative.dev/', icon: <ReactNative /> },
-      { name: 'TypeScript', href: 'https://typescriptlang.org/', icon: <TypeScript /> },
+      {
+        name: 'React Native',
+        href: 'https://reactnative.dev/',
+        icon: <ReactNative />,
+      },
+      {
+        name: 'TypeScript',
+        href: 'https://typescriptlang.org/',
+        icon: <TypeScript />,
+      },
       { name: 'Figma', href: 'https://figma.com/', icon: <Figma /> },
       { name: 'GitHub', href: 'https://github.com/', icon: <Github /> },
       { name: 'MySQL', href: 'https://mysql.com/', icon: <MySQL /> },
       { name: 'HTML', href: 'https://html.com/', icon: <Html /> },
       { name: 'CSS', href: 'https://css.com/', icon: <CSS /> },
-      { name: 'JavaScript', href: 'https://javascript.com/', icon: <JavaScript /> },
+      {
+        name: 'JavaScript',
+        href: 'https://javascript.com/',
+        icon: <JavaScript />,
+      },
     ],
     website: 'https://nobrokerage.com',
   },
@@ -90,7 +133,11 @@ export const experiences: Experience[] = [
     startDate: 'June 2025',
     endDate: 'September 2025',
     technologies: [
-      { name: 'React Native', href: 'https://reactnative.dev/', icon: <ReactNative /> },
+      {
+        name: 'React Native',
+        href: 'https://reactnative.dev/',
+        icon: <ReactNative />,
+      },
       { name: 'GitHub', href: 'https://github.com/', icon: <Github /> },
       { name: 'Figma', href: 'https://figma.com/', icon: <Figma /> },
     ],
@@ -115,7 +162,11 @@ export const experiences: Experience[] = [
       { name: 'MySQL', href: 'https://mysql.com/', icon: <MySQL /> },
       { name: 'GitHub', href: 'https://github.com/', icon: <Github /> },
       { name: 'Next.js', href: 'https://nextjs.org/', icon: <NextJs /> },
-      { name: 'JavaScript', href: 'https://javascript.com/', icon: <JavaScript /> },
+      {
+        name: 'JavaScript',
+        href: 'https://javascript.com/',
+        icon: <JavaScript />,
+      },
     ],
     website: 'https://eternainfotech.com',
   },

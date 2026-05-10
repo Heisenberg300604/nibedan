@@ -50,7 +50,7 @@ export const hackathons: Hackathon[] = [
         'Time-Series DB',
       ],
       impact:
-        'Built for NMDC — India\'s largest iron ore producer. The platform targets significant energy cost reduction in comminution circuits which account for the highest energy usage in mining.',
+        "Built for NMDC — India's largest iron ore producer. The platform targets significant energy cost reduction in comminution circuits which account for the highest energy usage in mining.",
     },
   },
   {

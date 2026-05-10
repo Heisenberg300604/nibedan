@@ -28,8 +28,8 @@ export default function HackathonsPage() {
             Hackathon Achievements
           </h1>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            My journey through hackathons and coding competitions — 5 wins, 8 finals, countless
-            lessons.
+            My journey through hackathons and coding competitions — 5 wins, 8
+            finals, countless lessons.
           </p>
           {/* Stats */}
           <div className="mx-auto mt-6 flex max-w-sm justify-center gap-8">
@@ -43,7 +43,15 @@ export default function HackathonsPage() {
             </div>
             <div className="text-center">
               <div className="flex h-9 items-center justify-center mb-1">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-8 text-yellow-500">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="size-8 text-yellow-500"
+                >
                   <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
                   <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
                   <path d="M4 22h16" />
