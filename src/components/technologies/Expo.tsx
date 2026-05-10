@@ -1,34 +1,30 @@
 import React from 'react';
 
-export default function ReactNative({
-  className = '',
-  ...props
-}: React.SVGProps<SVGSVGElement> & { className?: string }) {
+export default function Expo() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 50 50"
-      width="100%"
-      height="100%"
+      width="1em"
+      height="1em"
       fill="none"
-      className={`transition-all duration-300 ${className}`}
-      {...props}
+      className="transition-all duration-300"
     >
       <defs>
-        <linearGradient id="rn-grad" x1="10%" y1="0%" x2="90%" y2="100%">
-          <stop offset="0%" stopColor="#61DAFB" />
-          <stop offset="50%" stopColor="#1EA7E1" />
-          <stop offset="100%" stopColor="#0E8BA8" />
+        <linearGradient id="expo-grad" x1="10%" y1="0%" x2="90%" y2="100%">
+          <stop offset="0%" stopColor="#667EEA" />
+          <stop offset="50%" stopColor="#764BA2" />
+          <stop offset="100%" stopColor="#F093FB" />
         </linearGradient>
-        <filter id="rn-glow" x="-20%" y="-20%" width="140%" height="140%">
+        <filter id="expo-glow" x="-20%" y="-20%" width="140%" height="140%">
           <feGaussianBlur stdDeviation="1.5" result="blur" />
         </filter>
       </defs>
-      <g filter="url(#rn-glow)" opacity="0.3" fill="url(#rn-grad)">
+      <g filter="url(#expo-glow)" opacity="0.3" fill="url(#expo-grad)">
         <path d="M23.799,20.071c0.375-0.547,0.787-0.618,1.122-0.618c0.333,0,0.889,0.071,1.264,0.618	c4.895,6.668,15.047,24.257,15.985,25.215c1.39,1.419,3.298,0.535,4.406-1.074c1.093-1.585,1.395-2.697,1.395-3.883	c0-0.808-15.81-29.975-17.404-32.403C29.036,5.589,28.537,5,25.918,5h-1.96c-2.614,0-2.992,0.589-4.522,2.923	c-1.597,2.433-17.406,31.6-17.406,32.408c0,1.188,0.302,2.298,1.395,3.883c1.107,1.609,3.016,2.495,4.406,1.074	c0.939-0.958,11.076-18.547,15.969-25.213L23.799,20.071z" />
       </g>
       <path
-        fill="url(#rn-grad)"
+        fill="url(#expo-grad)"
         d="M23.799,20.071c0.375-0.547,0.787-0.618,1.122-0.618c0.333,0,0.889,0.071,1.264,0.618	c4.895,6.668,15.047,24.257,15.985,25.215c1.39,1.419,3.298,0.535,4.406-1.074c1.093-1.585,1.395-2.697,1.395-3.883	c0-0.808-15.81-29.975-17.404-32.403C29.036,5.589,28.537,5,25.918,5h-1.96c-2.614,0-2.992,0.589-4.522,2.923	c-1.597,2.433-17.406,31.6-17.406,32.408c0,1.188,0.302,2.298,1.395,3.883c1.107,1.609,3.016,2.495,4.406,1.074	c0.939-0.958,11.076-18.547,15.969-25.213L23.799,20.071z"
       />
     </svg>
