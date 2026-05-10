@@ -76,8 +76,8 @@ export default function Hero() {
         {buttons.map((button, index) => {
           const IconComponent =
             buttonIcons[button.icon as keyof typeof buttonIcons];
-            
-          if (button.text === 'Resume / CV') {
+
+          if (button.text === 'Resume') {
             return (
               <div key={index} className="group relative" tabIndex={0}>
                 <Button
@@ -91,21 +91,21 @@ export default function Hero() {
                   {IconComponent && <IconComponent />}
                   {button.text}
                 </Button>
-                
+
                 {/* Sleek Minimal Dropdown with Hover Bridge */}
                 <div className="invisible absolute left-0 top-full z-50 w-56 -translate-y-2 pt-2 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 focus-within:visible focus-within:translate-y-0 focus-within:opacity-100">
                   <div className="flex flex-col overflow-hidden rounded-xl border border-border/50 bg-background/80 p-1.5 shadow-xl backdrop-blur-xl">
-                    <a 
-                      href={button.href} 
-                      target="_blank" 
+                    <a
+                      href={button.href}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-secondary/50 hover:text-foreground focus:bg-secondary/50 focus:text-foreground outline-none"
                     >
                       Web Development Resume
                     </a>
-                    <a 
-                      href={button.href} 
-                      target="_blank" 
+                    <a
+                      href={button.mobileHref || button.href}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-secondary/50 hover:text-foreground focus:bg-secondary/50 focus:text-foreground outline-none"
                     >
@@ -129,7 +129,7 @@ export default function Hero() {
               )}
               asChild
             >
-              <Link 
+              <Link
                 href={button.href}
                 target={isExternal ? '_blank' : undefined}
                 rel={isExternal ? 'noopener noreferrer' : undefined}

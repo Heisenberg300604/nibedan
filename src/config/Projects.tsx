@@ -71,7 +71,7 @@ export const projects: Project[] = [
     title: 'BudgetMap — Expense Tracker',
     description:
       'Full-stack expense tracker with dynamic dashboard, JWT auth, multi-currency live rates, and CSV/PDF data export.',
-    image: '/project/budgetmap.png',
+    image: '/project/BudgetMap.png',
     link: 'https://budget-map-new.vercel.app/',
     technologies: [
       { name: 'React', icon: <ReactIcon key="react" /> },
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     title: 'Signal-X — AI Traffic Management',
     description:
       'YOLOv8-powered traffic system with IoT integration, MapMyIndia API, adaptive signal control, and emergency vehicle prioritization.',
-    image: '/project/signal-x.png',
+    image: '/project/SignalX.png',
     link: 'https://signal-x-zkh5.vercel.app/',
     technologies: [
       { name: 'React', icon: <ReactIcon key="react" /> },
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     title: 'Flox — Social Media Platform',
     description:
       'Modern social media platform with Google OAuth via Clerk, post creation, follow system, real-time notifications, and Prisma/PostgreSQL backend.',
-    image: '/project/flox.png',
+    image: '/project/Flox.png',
     link: 'https://flox-social-media.vercel.app/',
     technologies: [
       { name: 'Next.js', icon: <NextJs key="nextjs" /> },
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     title: 'create-expo-starter — NPM Package',
     description:
       'Published CLI tool that scaffolds production-ready Expo React Native apps in seconds. Pre-configures TypeScript, Expo Router, NativeWind, Zustand, and Axios.',
-    image: '/project/expo-starter.png',
+    image: '/project/initexpo.png',
     link: 'https://www.npmjs.com/package/create-expo-starter',
     technologies: [
       { name: 'React Native', icon: <ReactNative key="react-native" /> },

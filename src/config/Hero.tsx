@@ -99,8 +99,10 @@ export const heroConfig = {
     },
     {
       variant: 'outline',
-      text: 'Resume / CV',
+      text: 'Resume',
       href: 'https://resumenibedanpati.tiiny.site',
+      mobileHref:
+        'https://drive.google.com/file/d/1V8MXmVyiNN1aOUJDRAAgpPPjVZ7rHqXf/view?usp=sharing',
       icon: 'CV',
     },
     {

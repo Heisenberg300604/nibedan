@@ -16,9 +16,8 @@ const navLinks = [
   { label: 'Experience', href: '/work-experience' },
   { label: 'Projects', href: '/projects' },
   { label: 'Hackathons', href: '/hackathons' },
-  { label: 'LeetCode', href: '/leetcode' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Resume', href: '/resume' },
+  { label: 'LeetCode', href: 'https://leetcode.com/u/Nibedan/' },
+  { label: 'Resume', href: 'https://resumenibedanpati.tiiny.site' },
 ];
 
 const socialLinks = [
@@ -49,7 +48,7 @@ const socialLinks = [
   },
   {
     name: 'Instagram',
-    href: 'https://www.instagram.com/',
+    href: 'https://www.instagram.com/nibedan_3006',
     icon: <Instagram />,
   },
   {
@@ -80,6 +79,12 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                  rel={
+                    link.href.startsWith('http')
+                      ? 'noopener noreferrer'
+                      : undefined
+                  }
                   className="text-secondary w-fit text-sm transition-all duration-200 hover:text-foreground hover:underline hover:decoration-2 hover:underline-offset-4"
                 >
                   {link.label}
