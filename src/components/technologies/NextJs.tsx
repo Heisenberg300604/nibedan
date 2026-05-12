@@ -1,36 +1,22 @@
 export default function NextJs() {
   return (
-    <svg viewBox="0 0 128 128">
-      <circle cx="64" cy="64" r="64"></circle>
-      <path
-        fill="url(#a)"
-        d="M106.317 112.014 49.167 38.4H38.4v51.179h8.614v-40.24l52.54 67.884a64.216 64.216 0 0 0 6.763-5.209z"
-      ></path>
-      <path fill="url(#b)" d="M81.778 38.4h8.533v51.2h-8.533z"></path>
+    <svg viewBox="0 0 100 100" fill="none">
+      <g clipPath="url(#clip0)">
+        <path d="M50 100c27.614 0 50-22.386 50-50s-22.386-50-50-50S0 22.386 0 50s22.386 50 50 50" fill="#fff" />
+        <path d="M83.06 87.51L38.412 30H30v39.983h6.73V38.545L77.777 91.58a50 50 0 0 0 5.283-4.07" fill="url(#paint0_linear_905_657)" />
+        <path d="M70.556 29.999h-6.667v40h6.667z" fill="url(#paint1_linear_905_657)" />
+      </g>
       <defs>
-        <linearGradient
-          id="a"
-          x1="109"
-          x2="144.5"
-          y1="116.5"
-          y2="160.5"
-          gradientTransform="scale(.71111)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#fff"></stop>
-          <stop offset="1" stopColor="#fff" stopOpacity="0"></stop>
+        <clipPath id="clip0">
+          <path fill="#fff" d="M0 0h100v100H0z" />
+        </clipPath>
+        <linearGradient id="paint0_linear_905_657" x1="60.556" y1="64.721" x2="80.278" y2="89.166" gradientUnits="userSpaceOnUse">
+          <stop />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
         </linearGradient>
-        <linearGradient
-          id="b"
-          x1="121"
-          x2="120.799"
-          y1="54"
-          y2="106.875"
-          gradientTransform="scale(.71111)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#fff"></stop>
-          <stop offset="1" stopColor="#fff" stopOpacity="0"></stop>
+        <linearGradient id="paint1_linear_905_657" x1="67.222" y1="29.999" x2="67.111" y2="59.374" gradientUnits="userSpaceOnUse">
+          <stop />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
