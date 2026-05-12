@@ -7,12 +7,14 @@ import PostgreSQL from '@/components/technologies/PostgreSQL';
 import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
 import ReactNative from '@/components/technologies/ReactNative';
+import Supabase from '@/components/technologies/Supabase';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
 import Vercel from '@/components/technologies/Vercel';
 import { Project } from '@/types/project';
 
 export const projects: Project[] = [
+  // ─── Mobile ──────────────────────────────────────────────────────────────
   {
     title: 'PustakHub',
     description:
@@ -21,14 +23,15 @@ export const projects: Project[] = [
     technologies: [
       { name: 'React Native', icon: <ReactNative key="rn" /> },
       { name: 'TypeScript', icon: <TypeScript key="ts" /> },
+      { name: 'Supabase', icon: <Supabase key="sb" /> },
       { name: 'PostgreSQL', icon: <PostgreSQL key="pg" /> },
-      { name: 'Vercel', icon: <Vercel key="vercel" /> },
     ],
     github: 'https://github.com/Heisenberg300604/PustakHub',
     details: true,
     projectDetailsPageSlug: '/projects/pustakhub',
     isWorking: true,
     statusLabel: 'Completed',
+    category: 'mobile',
   },
   {
     title: 'Taply',
@@ -38,15 +41,17 @@ export const projects: Project[] = [
     technologies: [
       { name: 'React Native', icon: <ReactNative key="rn" /> },
       { name: 'TypeScript', icon: <TypeScript key="ts" /> },
+      { name: 'Supabase', icon: <Supabase key="sb" /> },
       { name: 'PostgreSQL', icon: <PostgreSQL key="pg" /> },
-      { name: 'Node.js', icon: <NodeJs key="node" /> },
     ],
     github: 'https://github.com/Heisenberg300604/Taply',
     details: true,
     projectDetailsPageSlug: '/projects/taply',
     isWorking: true,
     statusLabel: 'Completed',
+    category: 'mobile',
   },
+  // ─── Web ──────────────────────────────────────────────────────────────────
   {
     title: 'Recap — AI Study Companion',
     description:
@@ -65,6 +70,7 @@ export const projects: Project[] = [
     projectDetailsPageSlug: '/projects/recap',
     isWorking: true,
     statusLabel: 'Deployed',
+    category: 'web',
   },
   {
     title: 'BudgetMap — Expense Tracker',
@@ -84,6 +90,7 @@ export const projects: Project[] = [
     projectDetailsPageSlug: '/projects/budgetmap',
     isWorking: true,
     statusLabel: 'Deployed',
+    category: 'web',
   },
   {
     title: 'Signal-X — AI Traffic Management',
@@ -103,6 +110,7 @@ export const projects: Project[] = [
     projectDetailsPageSlug: '/projects/signal-x',
     isWorking: true,
     statusLabel: 'Deployed',
+    category: 'web',
   },
   {
     title: 'Flox — Social Media Platform',
@@ -122,6 +130,7 @@ export const projects: Project[] = [
     projectDetailsPageSlug: '/projects/flox',
     isWorking: true,
     statusLabel: 'Deployed',
+    category: 'web',
   },
   {
     title: 'Zap-URL — URL Shortening Service',
@@ -141,24 +150,7 @@ export const projects: Project[] = [
     projectDetailsPageSlug: '/projects/zapurl',
     isWorking: true,
     statusLabel: 'Operational',
-  },
-  {
-    title: 'create-expo-starter — NPM Package',
-    description:
-      'Published CLI tool that scaffolds production-ready Expo React Native apps in seconds. Pre-configures TypeScript, Expo Router, NativeWind, Zustand, and Axios.',
-    image: '/project/initexpo.png',
-    link: 'https://www.npmjs.com/package/create-expo-starter',
-    technologies: [
-      { name: 'React Native', icon: <ReactNative key="react-native" /> },
-      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
-      { name: 'Node.js', icon: <NodeJs key="nodejs" /> },
-    ],
-    github: 'https://github.com/Heisenberg300604/create-expo-starter',
-    live: 'https://www.npmjs.com/package/create-expo-starter',
-    details: false,
-    projectDetailsPageSlug: '/projects/create-expo-starter',
-    isWorking: true,
-    statusLabel: 'Published',
+    category: 'web',
   },
   {
     title: 'EchoChat — Real-time Communication',
@@ -178,6 +170,7 @@ export const projects: Project[] = [
     projectDetailsPageSlug: '/projects/echochat',
     isWorking: true,
     statusLabel: 'Deployed',
+    category: 'web',
   },
   {
     title: 'Athleto — Empowering Athletes',
@@ -197,6 +190,7 @@ export const projects: Project[] = [
     projectDetailsPageSlug: '/projects/athleto',
     isWorking: true,
     statusLabel: 'Deployed',
+    category: 'web',
   },
   {
     title: 'Travello — Gamified Tourism',
@@ -216,5 +210,83 @@ export const projects: Project[] = [
     projectDetailsPageSlug: '/projects/travello',
     isWorking: true,
     statusLabel: 'Deployed',
+    category: 'web',
+  },
+  {
+    title: 'Eventix — Event Booking Platform',
+    description:
+      'Course teaching project — a full event discovery and booking platform built with React, Supabase Auth, Framer Motion, and React Router. Teaches real-world data flows and UI composition.',
+    image: '/project/eventix.png',
+    link: 'https://eventix-rho.vercel.app',
+    technologies: [
+      { name: 'React', icon: <ReactIcon key="react" /> },
+      { name: 'Supabase', icon: <Supabase key="supabase" /> },
+      { name: 'Tailwind CSS', icon: <TailwindCss key="tailwind" /> },
+      { name: 'Vercel', icon: <Vercel key="vercel" /> },
+    ],
+    github: 'https://github.com/Heisenberg300604/Eventix',
+    live: 'https://eventix-rho.vercel.app',
+    details: false,
+    projectDetailsPageSlug: '/projects/eventix',
+    isWorking: true,
+    statusLabel: 'Deployed',
+    category: 'web',
+  },
+  {
+    title: 'JetIntel — Aviation Intelligence',
+    description:
+      'Business jet analysis platform with AI-powered mission evaluation, performance analytics, fleet comparison, and distance calculator for business aviation.',
+    image: '/project/jetintel.png',
+    link: '#',
+    technologies: [
+      { name: 'React', icon: <ReactIcon key="react" /> },
+      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
+      { name: 'Tailwind CSS', icon: <TailwindCss key="tailwind" /> },
+      { name: 'Node.js', icon: <NodeJs key="nodejs" /> },
+    ],
+    github: 'https://github.com/Heisenberg300604/JetIntel-DB',
+    details: false,
+    projectDetailsPageSlug: '/projects/jetintel',
+    isWorking: true,
+    statusLabel: 'Deployed',
+    category: 'web',
+  },
+  // ─── CLI / Open Source ────────────────────────────────────────────────────
+  {
+    title: 'create-expo-starter — NPM Package',
+    description:
+      'Published CLI tool that scaffolds production-ready Expo React Native apps in seconds. Pre-configures TypeScript, Expo Router, NativeWind, Zustand, and Axios.',
+    image: '/project/initexpo.png',
+    link: 'https://www.npmjs.com/package/create-expo-starter',
+    technologies: [
+      { name: 'React Native', icon: <ReactNative key="react-native" /> },
+      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
+      { name: 'Node.js', icon: <NodeJs key="nodejs" /> },
+    ],
+    github: 'https://github.com/Heisenberg300604/create-expo-starter',
+    live: 'https://init-expo-app.vercel.app/',
+    details: false,
+    projectDetailsPageSlug: '/projects/create-expo-starter',
+    isWorking: true,
+    statusLabel: 'Published',
+    category: 'cli',
+  },
+  {
+    title: 'ProtoSearch — Search Engine',
+    description:
+      'Self-built search engine from scratch — BFS crawler, Porter stemmer, TF-IDF ranking, inverted index on SQLite, SSRF protection, and a clean single-page frontend.',
+    image: '/project/protosearch.png',
+    link: '#',
+    technologies: [
+      { name: 'Node.js', icon: <NodeJs key="nodejs" /> },
+      { name: 'Express', icon: <ExpressJs key="express" /> },
+      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
+    ],
+    github: 'https://github.com/Heisenberg300604/ProtoSearch',
+    details: false,
+    projectDetailsPageSlug: '/projects/protosearch',
+    isWorking: true,
+    statusLabel: 'Completed',
+    category: 'cli',
   },
 ];

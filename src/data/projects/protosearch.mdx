@@ -1,0 +1,70 @@
+---
+title: 'ProtoSearch'
+description: 'A search engine built from scratch — no search libraries, no hosted APIs. BFS web crawler, Porter stemmer, TF-IDF ranking, inverted index on SQLite, SSRF protection, and a clean SPA frontend.'
+image: '/project/protosearch.png'
+technologies:
+  ['Node.js', 'Express', 'SQLite', 'JavaScript', 'Cheerio', 'Porter Stemmer', 'TF-IDF']
+github: 'https://github.com/Heisenberg300604/ProtoSearch'
+live: '#'
+timeline: '2 Weeks'
+role: 'Systems Engineer'
+status: 'completed'
+featured: true
+challenges:
+  ['TF-IDF Laplace smoothing bug', 'BFS crawler with robots.txt compliance', 'SSRF protection for crawler', 'Inverted index design']
+learnings: ['Information retrieval algorithms', 'SQLite WAL mode', 'Web crawling ethics', 'First-principles system building']
+isPublished: true
+---
+
+## Overview
+
+**ProtoSearch** is a self-hosted personal search engine built from absolute scratch — no search libraries, no hosted search APIs. Every layer is hand-built: crawler, tokenizer, stemmer, TF-IDF engine, inverted index, and query ranker.
+
+> *Proto* comes from the Greek *protos*, meaning "first" or "original." This is a first-principles implementation of the technology powering every major search engine.
+
+## How It Works
+
+### **1. Web Crawler**
+- Fetches any public URL, strips noise elements (`<nav>`, `<script>`, `<style>`), and extracts clean body text
+- Checks and respects `robots.txt` before crawling (with per-domain caching)
+- BFS mode follows links up to 3 levels deep from a seed URL
+
+### **2. Tokenizer + Porter Stemmer**
+The same pipeline runs identically at index time and query time — critical for matching:
+```
+raw text → lowercase → strip punctuation → split → remove stop words
+         → remove short tokens → Porter stem
+```
+`running`, `runs`, `ran` → all stem to `run` → always match.
+
+### **3. TF-IDF Ranking**
+- **TF** = term frequency within a document (normalised by doc length)
+- **IDF** = log((N+1) / (df+1)) with Laplace smoothing to prevent zero scores on first-indexed documents
+- Scores stored at index time; queries are just SQL `SUM(tfidf_score)` aggregations
+
+### **4. Inverted Index**
+SQLite-backed `term → page` mapping with `CREATE INDEX idx_term ON index_entries(term)` for O(log n) lookups.
+
+### **5. SSRF Protection**
+All URLs checked against RFC-1918 private ranges, loopback, and cloud metadata endpoints before crawling.
+
+## Features
+
+| Feature | Description |
+|---------|-------------|
+| BFS Crawling | Follow links depth-first up to 3 levels |
+| robots.txt | Fetched and cached per domain |
+| Porter Stemming | Reduces inflected words to root forms |
+| TF-IDF Ranking | Laplace-smoothed relevance scoring |
+| Snippet Extraction | ~200-char excerpt centred on matching term |
+| Search Logging | Every query persisted for analytics |
+| SSRF Protection | Blocks private ranges and metadata endpoints |
+| Pagination | `?limit=` and `?offset=` on `GET /search` |
+
+## Tech Stack
+
+```
+Node.js (CommonJS) · Express v5 · better-sqlite3
+Axios · Cheerio · natural (Porter stemmer) · robots-parser
+dotenv · nodemon
+```

@@ -11,6 +11,7 @@ export interface Project {
   projectDetailsPageSlug: string;
   isWorking: boolean;
   statusLabel?: string;
+  category: 'web' | 'mobile' | 'cli' | 'ai';
 }
 
 export interface ProjectCaseStudyFrontmatter {

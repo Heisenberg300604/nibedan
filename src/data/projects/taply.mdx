@@ -1,52 +1,59 @@
 ---
 title: 'Taply'
-description: 'Digital business card platform with QR-based instant sharing, real-time profile sync, Supabase Auth, and live analytics dashboard.'
+description: 'Live digital business card app — update your profile once, every QR code you have ever shared updates instantly. No app install required for recipients.'
 image: '/project/taply.png'
 technologies:
-  ['React Native', 'TypeScript', 'Expo Router', 'Supabase', 'Zustand', 'NativeWind', 'EAS']
+  ['React Native', 'Expo SDK 51', 'TypeScript', 'Supabase', 'PostgreSQL', 'Zustand', 'NativeWind', 'Expo Router']
 github: 'https://github.com/Heisenberg300604/Taply'
 live: '#'
 timeline: '8 Weeks'
 role: 'Full Stack Mobile Developer'
-team: 'Solo'
 status: 'completed'
 featured: true
 challenges:
-  ['Real-time QR sync', 'Offline-capable SVG rendering', 'Native share sheets', 'Analytics pipeline']
-learnings: ['Supabase Realtime', 'Expo Router deep linking', 'SVG compression', 'Analytics UX']
+  ['Real-time QR sync', 'Supabase RLS public/private access', 'Avatar upload & compression', 'Analytics with edge functions']
+learnings: ['Supabase Realtime', 'Expo Router deep linking', 'Zustand auth state', 'NativeWind hybrid styling']
 isPublished: true
 ---
 
 ## Overview
 
-**Taply** is a live digital business card platform that enables instant, zero-install QR-based contact sharing. Any QR code ever shared **auto-updates in real time** when the user's profile changes — completely eliminating stale paper cards.
+**Taply** is a live, production-grade digital business card app built for developers, students, and professionals. Update your profile once, and every QR code you've ever shared updates instantly — no app install required from the recipient.
+
+## Problem Statement
+
+Traditional contact cards go stale the moment they're printed. Taply replaces the paper card ritual with a dynamic profile tied to an auto-updating QR code. Anyone with a standard camera can scan it; no app install required.
+
+## Architecture
+
+Taply uses a React Native + Expo frontend with Supabase as a complete backend-as-a-service — handling authentication, PostgreSQL storage, file uploads, and Row Level Security so users can only modify their own profile while keeping public read access for QR scans.
 
 ## Key Features
 
-### **Zero-Install QR Sharing**
-- Any recipient can scan and view the card without installing an app
-- QR codes auto-update in real time when profile changes via Supabase Realtime
-
 ### **Authentication**
-- End-to-end Supabase Auth with Email, Google OAuth, and GitHub OAuth
-- Row Level Security for secure, per-user data isolation
+- Secure Sign Up, Log In, and Forgot Password flows via Supabase Auth
+- First-time 3-screen onboarding flow for new installs
 
-### **Profile & Links**
-- Interactive draggable Links Manager for ordering social/contact links
-- Avatar upload with client-side compression
-- 3-screen first-time onboarding flow
+### **Live QR Card**
+- Instant SVG-based QR code rendering with offline support
+- Every scan of the QR opens the latest live profile — no stale data ever
+
+### **Profile Builder**
+- Customizable Display Name, Pronouns, Bio, and an interactive drag-and-drop Links Manager
+- Avatar upload with in-device compression and Supabase Storage
 
 ### **Analytics Dashboard**
-- Real-time total scan counts, device breakdown (mobile vs. desktop)
-- Recent scan history with timestamps
+- Real-time insights into Total Scans, Device Breakdown (Mobile vs Desktop), and Recent Scan History
+- City-level tracking via Supabase Edge Functions
 
-### **Sharing & Themes**
-- Card sharing via clipboard, save-to-device, and native iOS/Android share sheets
-- 4 global color themes: Minimal, Lavender, Sage, Ocean
+### **Card Sharing**
+- Copy to clipboard, save QR as a device image, or launch native iOS/Android share sheets
+- 4 customizable themes: Minimal, Lavender, Sage, Ocean
 
 ## Tech Stack
 
 ```
-React Native · TypeScript · Expo SDK 51 · Expo Router
-Supabase (Auth + Realtime + Storage) · Zustand · NativeWind · EAS Build
+React Native · Expo SDK 51 · TypeScript · Expo Router
+Supabase (Auth + PostgreSQL + Storage + Realtime)
+Zustand · NativeWind · EAS Build
 ```

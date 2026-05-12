@@ -1,0 +1,61 @@
+---
+title: 'Eventix'
+description: 'Course teaching project — a modern event discovery and booking platform built to teach React and Supabase. Students build routing, data flows, auth, and booking in real incremental lessons.'
+image: '/project/eventix.png'
+technologies:
+  ['React 19', 'Vite', 'React Router', 'Supabase', 'Tailwind CSS', 'Framer Motion']
+github: 'https://github.com/Heisenberg300604/Eventix'
+live: 'https://eventix-rho.vercel.app'
+timeline: '4 Weeks (Course)'
+role: 'Instructor & Developer'
+status: 'completed'
+featured: false
+challenges:
+  ['Structuring incremental lessons', 'Supabase Auth + database wiring', 'Framer Motion animations', 'Teaching data flow concepts']
+learnings: ['Curriculum design', 'React 19 features', 'Supabase full stack', 'Teaching complex concepts simply']
+isPublished: true
+---
+
+## Overview
+
+**Eventix** is a course teaching project — a real event discovery and booking platform I built to teach React and Supabase. Students follow the codebase lesson-by-lesson, starting from a static UI and progressively wiring in routing, auth, database reads/writes, and payment flows.
+
+> This repo is **intentionally incomplete** in its public form. Each lesson adds features and refactors the codebase as we move from a static UI to a fully connected app.
+
+## What Students Build
+
+### **Marketing & Discovery**
+- Animated homepage with event cards using Framer Motion
+- Event detail pages with structured ticket information
+
+### **Auth Flow**
+- Login and Signup screens with Supabase Auth
+- Protected routes and session persistence
+
+### **Booking System**
+- Event details page with seat selection
+- User booking dashboard showing confirmed reservations
+
+### **Host Dashboard**
+- Create and edit events
+- Booking management
+
+## Routes Structure
+
+```
+/               → Marketing homepage
+/login          → Auth (login)
+/signup         → Auth (signup)
+/my-bookings    → User bookings
+/event/:id      → Event details + booking
+/dashboard      → Host dashboard
+/dashboard/create      → Create event
+/dashboard/edit/:id    → Edit event
+```
+
+## Tech Stack
+
+```
+React 19 · Vite · React Router
+Supabase (Auth + PostgreSQL) · Tailwind CSS · Framer Motion
+```

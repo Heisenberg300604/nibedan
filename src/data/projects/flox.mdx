@@ -1,13 +1,48 @@
 ---
 title: 'Flox'
-description: ''
+description: 'Modern full-stack social media platform with Google OAuth, post creation, follow system, real-time notifications, and Prisma/PostgreSQL backend.'
 image: '/project/Flox.png'
-technologies: []
+technologies:
+  ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Clerk', 'Tailwind CSS', 'Vercel']
 github: 'https://github.com/Heisenberg300604/Flox'
 live: 'https://flox-social-media.vercel.app/'
-timeline: ''
-role: ''
+timeline: '3 Weeks'
+role: 'Full Stack Developer'
 status: 'completed'
 featured: true
-isPublished: false
+challenges:
+  ['Real-time notifications', 'Follow graph queries', 'Clerk OAuth integration', 'Prisma relation management']
+learnings: ['Next.js App Router patterns', 'Prisma ORM', 'Clerk auth with webhooks', 'Optimistic UI updates']
+isPublished: true
 ---
+
+## Overview
+
+**Flox** is a feature-rich social media application built with Next.js App Router, TypeScript, and a PostgreSQL backend via Prisma. It lets users create posts, engage with likes and comments, follow other users, and receive real-time notifications.
+
+## Key Features
+
+### **Authentication**
+- Google OAuth and Email/Password login via Clerk
+- Protected routes and webhook-driven user sync to the database
+
+### **Social Graph**
+- Follow / unfollow system with follower/following counts
+- Activity feed filtered to followed users
+
+### **Content & Engagement**
+- Create, read, and delete posts
+- Like and comment on posts with live counters
+- Real-time notifications for likes, comments, and follows
+
+### **Architecture**
+- Next.js App Router with server components and server actions
+- Prisma ORM with a fully relational PostgreSQL schema
+- Deployed on Vercel with preview branches for every PR
+
+## Tech Stack
+
+```
+Next.js 14 (App Router) · TypeScript · Clerk
+Prisma · PostgreSQL (Neon) · Tailwind CSS · Vercel
+```

@@ -1,13 +1,76 @@
 ---
 title: 'create-expo-starter'
-description: ''
+description: 'Published CLI tool — scaffold production-ready Expo React Native apps in one command. Pre-configures TypeScript, Expo Router, NativeWind, Zustand, and Axios with a clean folder architecture.'
 image: '/project/initexpo.png'
-technologies: []
+technologies:
+  ['React Native', 'Expo SDK 54', 'TypeScript', 'Expo Router', 'NativeWind', 'Zustand', 'Axios', 'Node.js']
 github: 'https://github.com/Heisenberg300604/create-expo-starter'
-live: 'https://www.npmjs.com/package/create-expo-starter'
-timeline: ''
-role: ''
+live: 'https://init-expo-app.vercel.app/'
+timeline: '1 Week'
+role: 'OSS Author'
 status: 'completed'
 featured: true
-isPublished: false
+challenges:
+  ['Cross-platform template generation', 'Interactive CLI prompts', 'File patching utilities', 'npm package publishing']
+learnings: ['CLI tooling with Node.js', 'NPM package lifecycle', 'Template scaffolding patterns', 'Cross-platform file system ops']
+isPublished: true
 ---
+
+## Overview
+
+**create-expo-starter** is a CLI tool that generates fully-configured Expo React Native applications with a modern production tech stack in seconds. Think `create-t3-app`, but for mobile development.
+
+```bash
+npx create-expo-starter my-app
+```
+
+One command. A production-ready mobile app template.
+
+## Problem Solved
+
+Every React Native developer knows the pain of setting up a new project: 2–4 hours manually configuring NativeWind, state management, routing, API layers, and auth screens. This tool eliminates that entirely.
+
+| Without | With |
+|---------|------|
+| 2–4 hours setup | 30 seconds |
+| Manual NativeWind config | Pre-configured and working |
+| Setting up Zustand from scratch | Store ready to use |
+| Creating API layer every time | Axios client with interceptors |
+| Building auth screens again | Login, Signup, Home included |
+
+## What You Get
+
+```
+my-app/
+├── app/              # Expo Router file-based routing
+│   ├── _layout.tsx   # Root layout
+│   ├── index.tsx     # Welcome screen
+│   ├── login.tsx     # Login with validation
+│   ├── signup.tsx    # Signup with validation
+│   └── home.tsx      # Authenticated home
+├── src/
+│   ├── api/          # Axios client + service functions
+│   ├── components/   # Button, Input, Card UI components
+│   ├── store/        # Zustand store
+│   ├── hooks/        # Custom React hooks
+│   ├── constants/    # Theme tokens
+│   └── types/        # TypeScript types
+└── global.css        # Tailwind CSS entry
+```
+
+## Features
+
+- 🎨 **NativeWind** — Tailwind classes directly in React Native
+- 🗂️ **Expo Router** — File-based routing with deep link support
+- 🐻 **Zustand** — Lightweight global state management
+- 🌐 **Axios** — Pre-configured API client with auth interceptors
+- 🔐 **Auth Screens** — Login, Signup, Home with validation and navigation
+- 📁 **Clean Architecture** — Scalable structure following best practices
+
+## Tech Stack
+
+```
+Expo SDK 54 · TypeScript · Expo Router
+NativeWind 4.x · Zustand 5.x · Axios 1.x
+Node.js (CLI) · npm
+```

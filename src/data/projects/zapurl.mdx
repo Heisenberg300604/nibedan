@@ -1,13 +1,60 @@
 ---
 title: 'Zap-URL'
-description: ''
+description: 'Production-ready URL shortener applying system design principles — Redis caching, DynamoDB storage, AWS EC2 deployment, PM2 process management, and ArcJet security.'
 image: '/project/zapurl.png'
-technologies: []
+technologies:
+  ['React', 'TypeScript', 'Node.js', 'Express', 'AWS DynamoDB', 'Redis', 'AWS EC2', 'Vercel']
 github: 'https://github.com/Heisenberg300604/Zap-Url'
 live: 'https://zap-url-five.vercel.app'
-timeline: ''
-role: ''
+timeline: '2 Weeks'
+role: 'Full Stack Developer'
 status: 'completed'
 featured: true
-isPublished: false
+challenges:
+  ['Redis cache invalidation', 'AWS DynamoDB setup', 'SSRF protection', 'EC2 + Nginx reverse proxy']
+learnings: ['System design at scale', 'Redis caching patterns', 'ArcJet rate limiting', 'PM2 process management']
+isPublished: true
 ---
+
+## Overview
+
+**Zap-URL** is a full-stack URL shortener built with production-grade infrastructure. Beyond just shortening links, it showcases real system design principles: caching strategies, cloud deployments, and security hardening.
+
+## Architecture
+
+```
+React + Vite (Vercel) ──HTTPS──► Express + Node.js (AWS EC2)
+                                         │
+                              ┌──────────┴──────────┐
+                        Redis (Cache)         DynamoDB (Storage)
+```
+
+## Key Features
+
+### **Performance**
+- Redis caching for instant redirects on repeated visits
+- DynamoDB for scalable, low-latency persistent storage
+- Sub-100ms redirect times on cache hits
+
+### **Security**
+- ArcJet integration for bot protection and abuse prevention
+- Rate limiting per IP
+- Input validation and URL sanitization
+
+### **Infrastructure**
+- Backend hosted on AWS EC2 with Nginx as a reverse proxy
+- PM2 process manager for zero-downtime restarts
+- Frontend on Vercel with GitHub Actions CI
+
+### **API**
+- `POST /api/links/shorten` — create short URL
+- `GET /:shortCode` — redirect with Redis-first lookup
+- Custom short code support and URL expiry
+
+## Tech Stack
+
+```
+React 19 · TypeScript · Vite
+Node.js · Express · Redis · AWS DynamoDB · AWS EC2
+ArcJet · PM2 · Nginx · Vercel
+```

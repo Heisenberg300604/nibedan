@@ -1,13 +1,55 @@
 ---
 title: 'Signal-X'
-description: ''
+description: 'AI-powered smart traffic management system with YOLOv8 vehicle detection, MapMyIndia integration, emergency vehicle prioritization, and IoT signal control.'
 image: '/project/SignalX.png'
-technologies: []
+technologies:
+  ['React', 'Python', 'Flask', 'MongoDB', 'YOLOv8', 'OpenCV', 'WebSocket', 'MapMyIndia SDK']
 github: 'https://github.com/Heisenberg300604/Signal-X/tree/main'
 live: 'https://signal-x-zkh5.vercel.app/'
-timeline: ''
-role: ''
+timeline: '48 Hours (Hackathon)'
+role: 'Full Stack Developer'
 status: 'completed'
 featured: true
-isPublished: false
+challenges:
+  ['YOLOv8 real-time inference', 'WebSocket for live traffic data', 'Emergency vehicle siren detection', 'MapMyIndia SDK integration']
+learnings: ['Computer vision pipelines', 'IoT + web integration', 'Adaptive signal algorithms', 'Real-time WebSocket streams']
+isPublished: true
 ---
+
+## Overview
+
+**Signal-X** is an AI-driven Smart Traffic Management System designed to revolutionize urban mobility. Built as a hackathon project at SIH, it integrates computer vision, IoT, and geospatial intelligence to dynamically adapt traffic signals based on real-time congestion.
+
+## Problem Statement
+
+Conventional traffic lights operate on fixed timers regardless of actual traffic conditions — causing vehicle pile-ups, wasted green lights on empty lanes, and delays for emergency vehicles. Signal-X replaces this with an adaptive AI layer.
+
+## Key Features
+
+### **AI Traffic Analysis**
+- YOLOv8 + DeepSORT for real-time vehicle detection and tracking via CCTV feeds
+- Dynamic signal timing based on live congestion density
+- IoT Raspberry Pi controllers for physical signal management
+
+### **Emergency Vehicle Prioritization**
+- Siren audio detection via trained Keras model
+- Automatic green corridor creation for ambulances and fire trucks
+
+### **Citizen Alerts**
+- Real-time congestion notifications to citizens
+- Crowd-sourced road blockage reporting
+- Alternative route suggestions via MapMyIndia API
+
+### **Analytics Dashboard**
+- Live traffic heatmap visualization
+- Historical congestion pattern analysis
+- Predictive congestion modelling
+
+## Tech Stack
+
+```
+Frontend: React · MapMyIndia SDK · WebSocket · Tailwind CSS
+Backend: Python · Flask · MongoDB · WebSocket
+AI: YOLOv8 · DeepSORT · OpenCV · TensorFlow/Keras
+Hardware: Raspberry Pi · Arduino · CCTV Cameras
+```

@@ -1,13 +1,56 @@
 ---
 title: 'EchoChat'
-description: ''
+description: 'Modern 1-to-1 real-time chat app with dark UI, JWT auth, Socket.IO messaging, online presence indicators, and a planned WebRTC video calling layer.'
 image: '/project/echochat.png'
-technologies: []
+technologies:
+  ['Next.js', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Socket.IO', 'Tailwind CSS']
 github: 'https://github.com/Heisenberg300604/EchoChat'
 live: 'https://echo-chat-iota.vercel.app'
-timeline: ''
-role: ''
+timeline: '2 Weeks'
+role: 'Full Stack Developer'
 status: 'completed'
 featured: true
-isPublished: false
+challenges:
+  ['Socket.IO auth with JWT', 'Online presence tracking', 'Real-time message sync', 'Next.js + Express hybrid setup']
+learnings: ['WebSocket architecture', 'Prisma with PostgreSQL (Neon)', 'Socket.IO rooms', 'Tailwind v4 CSS-first theming']
+isPublished: true
 ---
+
+## Overview
+
+**EchoChat** is a full-stack 1-to-1 chat application built for speed and simplicity. It uses a REST API for authentication and chat history, and Socket.IO for real-time messaging. The frontend is a dark, elegant interface designed to feel modern and polished.
+
+## Architecture
+
+The project is split into a Next.js frontend and an Express + Socket.IO backend, with Prisma managing a PostgreSQL database on Neon.
+
+## Key Features
+
+### **Authentication**
+- JWT-based register and login with bcrypt password hashing
+- Protected `GET /auth/me` endpoint for session persistence
+- Tokens passed via `socket.auth` for authenticated WebSocket connections
+
+### **Real-time Messaging**
+- Socket.IO for instant message delivery
+- Online presence indicators updated in real-time across all clients
+- Chat history loaded from `GET /messages/:userId` on room entry
+
+### **UI**
+- Dark theme with teal accent colors
+- Mobile-friendly responsive layout
+- User list excluding self (`GET /users`)
+
+### **Roadmap**
+- Audio/Video calling via WebRTC
+- File and image sharing
+- Read receipts and typing indicators
+- Group chats
+
+## Tech Stack
+
+```
+Next.js 16 · TypeScript · Tailwind CSS v4 · shadcn/ui
+Node.js · Express · Socket.IO · Prisma
+PostgreSQL (Neon) · JWT · bcrypt
+```
