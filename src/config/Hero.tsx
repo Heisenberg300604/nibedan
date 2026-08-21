@@ -138,7 +138,7 @@ export const socialLinks = [
   },
   {
     name: 'YouTube',
-    href: 'https://www.youtube.com/@Heisenberg3006-y0',
+    href: 'https://www.youtube.com/@techwithheisenberg',
     icon: <YouTube />,
   },
   {
