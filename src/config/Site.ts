@@ -1,30 +1,28 @@
 /*
  * Single source of truth for the site's absolute URL and identity signals.
  *
- * ─────────────────────────────────────────────────────────────────────────
- * DEPLOYMENT: set NEXT_PUBLIC_URL to the production origin, with no trailing
- * slash (e.g. "https://nibedanpati.com"). Canonical tags, the sitemap, OG
- * image URLs and all JSON-LD @id values are derived from it. Leaving it at
- * localhost tells search engines your canonical page is on a machine they
- * cannot reach, which prevents indexing.
- * ─────────────────────────────────────────────────────────────────────────
+ * Canonical tags, the sitemap, OG image URLs and every JSON-LD @id are built
+ * from `siteUrl`. A production build uses the custom domain automatically, so
+ * no environment configuration is required for a normal deploy.
  */
-const FALLBACK_URL = 'http://localhost:3000';
+/** The canonical production origin. No trailing slash. */
+export const PRODUCTION_URL = 'https://nibedanpati.com';
+
+const DEV_URL = 'http://localhost:3000';
 
 /**
- * Vercel exposes the stable production domain here. Used only as a safety net
- * so a deploy that forgets NEXT_PUBLIC_URL still emits reachable canonicals
- * instead of localhost. Read server-side only — every consumer of `siteUrl`
- * renders on the server, so this cannot cause a hydration mismatch.
+ * Resolution order:
+ *   1. NEXT_PUBLIC_URL          — explicit override (preview deploys, staging)
+ *   2. PRODUCTION_URL           — any production build
+ *   3. DEV_URL                  — local development, stays noindex
+ *
+ * Deliberately NOT falling back to VERCEL_PROJECT_PRODUCTION_URL: that
+ * resolves to the *.vercel.app address, which would emit canonicals on a
+ * second domain and split the site's ranking signals away from the custom one.
  */
-const vercelProductionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : undefined;
-
 export const siteUrl = (
   process.env.NEXT_PUBLIC_URL ||
-  vercelProductionUrl ||
-  FALLBACK_URL
+  (process.env.NODE_ENV === 'production' ? PRODUCTION_URL : DEV_URL)
 ).replace(/\/+$/, '');
 
 /** True once a real public origin is configured. Guards indexing directives. */
