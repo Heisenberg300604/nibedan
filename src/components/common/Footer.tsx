@@ -16,8 +16,9 @@ const navLinks = [
   { label: 'Experience', href: '/work-experience' },
   { label: 'Projects', href: '/projects' },
   { label: 'Hackathons', href: '/hackathons' },
-  { label: 'LeetCode', href: 'https://leetcode.com/u/Nibedan/' },
-  { label: 'Resume', href: 'https://resumenibedanpati.tiiny.site' },
+  { label: 'LeetCode', href: '/leetcode' },
+  { label: 'Resume', href: '/resume' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const socialLinks = [

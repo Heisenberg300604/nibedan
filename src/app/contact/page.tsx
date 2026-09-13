@@ -1,29 +1,25 @@
 import Container from '@/components/common/Container';
 import ContactForm from '@/components/contact/ContactForm';
+import { PageJsonLd } from '@/components/seo/JsonLd';
 import { Separator } from '@/components/ui/separator';
 import { contactConfig } from '@/config/Contact';
-import { generateMetadata as getMetadata } from '@/config/Meta';
+import {
+  generateMetadata as getMetadata,
+  getPageMetadata,
+} from '@/config/Meta';
 import { Metadata } from 'next';
 import React from 'react';
 
-export const metadata: Metadata = {
-  ...getMetadata('/contact'),
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+export const metadata: Metadata = getMetadata('/contact');
 
 export default function ContactPage() {
   return (
     <Container className="py-16">
+      <PageJsonLd
+        path="/contact"
+        name="Contact"
+        description={getPageMetadata('/contact').description}
+      />
       <div className="space-y-8">
         {/* Header */}
         <div className="space-y-4 text-center">

@@ -1,31 +1,27 @@
 import Container from '@/components/common/Container';
+import { PageJsonLd } from '@/components/seo/JsonLd';
 import CheckCircle from '@/components/svgs/CheckCircle';
 import { Separator } from '@/components/ui/separator';
-import { generateMetadata as getMetadata } from '@/config/Meta';
+import {
+  generateMetadata as getMetadata,
+  getPageMetadata,
+} from '@/config/Meta';
 import { settingsJson, steps } from '@/config/Setup';
 import { Download, ExternalLink, FileText } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-export const metadata: Metadata = {
-  ...getMetadata('/setup'),
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+export const metadata: Metadata = getMetadata('/setup');
 
 export default function SetupPage() {
   return (
     <Container className="py-8 md:py-16">
+      <PageJsonLd
+        path="/setup"
+        name="VS Code Setup"
+        description={getPageMetadata('/setup').description}
+      />
       <div className="space-y-6 md:space-y-8">
         {/* Header */}
         <div className="space-y-3 text-center md:space-y-4">

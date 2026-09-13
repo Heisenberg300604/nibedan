@@ -1,19 +1,16 @@
 import Container from '@/components/common/Container';
 import { HackathonList } from '@/components/hackathons/HackathonList';
+import { PageJsonLd } from '@/components/seo/JsonLd';
 import { Separator } from '@/components/ui/separator';
 import { hackathons } from '@/config/Hackathons';
+import {
+  generateMetadata as getMetadata,
+  getPageMetadata,
+} from '@/config/Meta';
 import { Metadata } from 'next';
 import React from 'react';
 
-export const metadata: Metadata = {
-  title: 'Hackathons | Nibedan Pati',
-  description:
-    '5x Hackathon Winner including SIH Grand Finalist. Explore my hackathon journey, projects built under pressure, and innovative solutions.',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export const metadata: Metadata = getMetadata('/hackathons');
 
 const winners = hackathons.filter((h) => h.isWinner);
 const finalists = hackathons.filter((h) => h.isFinalist && !h.isWinner);
@@ -21,6 +18,11 @@ const finalists = hackathons.filter((h) => h.isFinalist && !h.isWinner);
 export default function HackathonsPage() {
   return (
     <Container className="py-16">
+      <PageJsonLd
+        path="/hackathons"
+        name="Hackathons"
+        description={getPageMetadata('/hackathons').description}
+      />
       <div className="space-y-8">
         {/* Header */}
         <div className="space-y-4 text-center">

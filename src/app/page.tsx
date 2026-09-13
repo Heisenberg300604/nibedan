@@ -7,11 +7,13 @@ import Hackathons from '@/components/landing/Hackathons';
 import Hero from '@/components/landing/Hero';
 import LeetCodeSection from '@/components/landing/LeetCodeSection';
 import Work from '@/components/landing/Projects';
+import { HomeJsonLd } from '@/components/seo/JsonLd';
 import React from 'react';
 
 export default function page() {
   return (
     <Container className="min-h-screen py-16">
+      <HomeJsonLd />
       <Hero />
       <Experience />
       <Work />

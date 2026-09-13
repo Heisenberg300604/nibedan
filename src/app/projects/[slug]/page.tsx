@@ -1,10 +1,12 @@
 import Container from '@/components/common/Container';
 import { ProjectContent } from '@/components/projects/ProjectContent';
 import { ProjectNavigation } from '@/components/projects/ProjectNavigation';
+import { ProjectJsonLd } from '@/components/seo/JsonLd';
 import ArrowLeft from '@/components/svgs/ArrowLeft';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { siteConfig } from '@/config/Meta';
+import { absoluteUrl, identity } from '@/config/Site';
 import {
   getProjectCaseStudyBySlug,
   getProjectCaseStudySlugs,
@@ -47,17 +49,24 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(siteConfig.url),
-    title: `${title} - Project Case Study`,
+    title: `${title} — Project by ${identity.name}`,
     description,
+    authors: [{ name: identity.name, url: siteConfig.url }],
+    creator: identity.name,
+    alternates: {
+      canonical: absoluteUrl(`/projects/${slug}`),
+    },
     openGraph: {
-      title: `${title} - Project Case Study`,
+      title: `${title} — Project by ${identity.name}`,
       description,
+      url: absoluteUrl(`/projects/${slug}`),
       images: [image],
       type: 'article',
+      authors: [identity.name],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} - Project Case Study`,
+      title: `${title} — Project by ${identity.name}`,
       description,
       images: [image],
     },
@@ -77,8 +86,19 @@ export default async function ProjectCaseStudyPage({
   const navigation = await getProjectNavigation(slug);
   const relatedProjects = await getRelatedProjectCaseStudies(slug, 2);
 
+  const { frontmatter } = caseStudy;
+
   return (
     <Container className="py-16">
+      <ProjectJsonLd
+        slug={slug}
+        name={frontmatter.title}
+        description={frontmatter.description}
+        image={frontmatter.image}
+        technologies={frontmatter.technologies}
+        github={frontmatter.github}
+        live={frontmatter.live}
+      />
       <div className="space-y-12">
         {/* Back Button */}
         <div>

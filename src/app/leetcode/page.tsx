@@ -1,23 +1,25 @@
 import Container from '@/components/common/Container';
 import SectionHeading from '@/components/common/SectionHeading';
 import LeetCodeStats from '@/components/leetcode/LeetCodeStats';
+import { PageJsonLd } from '@/components/seo/JsonLd';
 import { Separator } from '@/components/ui/separator';
+import {
+  generateMetadata as getMetadata,
+  getPageMetadata,
+} from '@/config/Meta';
 import { Metadata } from 'next';
 import React, { Suspense } from 'react';
 
-export const metadata: Metadata = {
-  title: 'LeetCode | Nibedan Pati',
-  description:
-    'My LeetCode profile stats — problem solving journey across Easy, Medium, and Hard difficulty levels.',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export const metadata: Metadata = getMetadata('/leetcode');
 
 export default function LeetCodePage() {
   return (
     <Container className="py-16">
+      <PageJsonLd
+        path="/leetcode"
+        name="LeetCode"
+        description={getPageMetadata('/leetcode').description}
+      />
       <div className="space-y-8">
         {/* Header */}
         <div className="space-y-4">

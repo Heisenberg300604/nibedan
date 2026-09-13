@@ -30,7 +30,7 @@ export default function RootLayout({
           >
             <ReactLenis root>
               <Navbar />
-              {children}
+              <main id="main">{children}</main>
               <OnekoCat />
               <Quote />
               <Footer />

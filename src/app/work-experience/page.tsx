@@ -1,29 +1,24 @@
 import Container from '@/components/common/Container';
 import { ExperienceList } from '@/components/experience/ExperienceList';
+import { PageJsonLd } from '@/components/seo/JsonLd';
 import { Separator } from '@/components/ui/separator';
 import { experiences } from '@/config/Experience';
-import { generateMetadata as getMetadata } from '@/config/Meta';
+import {
+  generateMetadata as getMetadata,
+  getPageMetadata,
+} from '@/config/Meta';
 import { Metadata } from 'next';
-import { Robots } from 'next/dist/lib/metadata/types/metadata-types';
 
-export const metadata: Metadata = {
-  ...getMetadata('/work-experience'),
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  } as Robots,
-};
+export const metadata: Metadata = getMetadata('/work-experience');
 
 export default function WorkExperiencePage() {
   return (
     <Container className="py-16">
+      <PageJsonLd
+        path="/work-experience"
+        name="Work Experience"
+        description={getPageMetadata('/work-experience').description}
+      />
       <div className="space-y-8">
         {/* Header */}
         <div className="space-y-4 text-center">

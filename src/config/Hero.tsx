@@ -143,7 +143,7 @@ export const socialLinks = [
   },
   {
     name: 'Instagram',
-    href: 'https://www.instagram.com/',
+    href: 'https://www.instagram.com/nibedan_3006',
     icon: <Instagram />,
   },
   {
