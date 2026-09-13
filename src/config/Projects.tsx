@@ -7,6 +7,7 @@ import PostgreSQL from '@/components/technologies/PostgreSQL';
 import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
 import ReactNative from '@/components/technologies/ReactNative';
+import SocketIo from '@/components/technologies/SocketIo';
 import Supabase from '@/components/technologies/Supabase';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
@@ -52,6 +53,46 @@ export const projects: Project[] = [
     category: 'mobile',
   },
   // ─── Web ──────────────────────────────────────────────────────────────────
+  {
+    title: 'SyncD — Real-Time Collaborative Music Listening',
+    description:
+      'Server-authoritative playback engine that keeps every listener in sync — timestamp-based playhead calculation with automatic drift correction past 2 seconds, plus live presence and chat over Socket.IO.',
+    image: '/project/syncd.png',
+    link: 'https://syncd-tau.vercel.app/',
+    technologies: [
+      { name: 'React', icon: <ReactIcon key="react" /> },
+      { name: 'Socket.IO', icon: <SocketIo key="socketio" /> },
+      { name: 'Prisma', icon: <Prisma key="prisma" /> },
+      { name: 'PostgreSQL', icon: <PostgreSQL key="postgresql" /> },
+    ],
+    github: 'https://github.com/Heisenberg300604/Syncd',
+    live: 'https://syncd-tau.vercel.app/',
+    details: false,
+    projectDetailsPageSlug: '/projects/syncd',
+    isWorking: true,
+    statusLabel: 'Deployed',
+    category: 'web',
+  },
+  {
+    title: 'OffScript — Speaking Practice Platform',
+    description:
+      'Built for my YouTube community — get an unexpected topic, research it, and speak for two minutes. In-browser recording via MediaRecorder, timezone-aware streaks, and a 26-week activity heatmap.',
+    image: '/project/offscript.png',
+    link: 'https://offscript-drab.vercel.app/',
+    technologies: [
+      { name: 'Next.js', icon: <NextJs key="nextjs" /> },
+      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
+      { name: 'PostgreSQL', icon: <PostgreSQL key="postgresql" /> },
+      { name: 'Tailwind CSS', icon: <TailwindCss key="tailwind" /> },
+    ],
+    github: 'https://github.com/Heisenberg300604/OffScript',
+    live: 'https://offscript-drab.vercel.app/',
+    details: false,
+    projectDetailsPageSlug: '/projects/offscript',
+    isWorking: true,
+    statusLabel: 'Deployed',
+    category: 'web',
+  },
   {
     title: 'Recap — AI Study Companion',
     description:
