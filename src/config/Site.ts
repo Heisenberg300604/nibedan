@@ -8,22 +8,22 @@
 /** The canonical production origin. No trailing slash. */
 export const PRODUCTION_URL = 'https://nibedanpati.com';
 
-const DEV_URL = 'http://localhost:3000';
-
 /**
  * Resolution order:
- *   1. NEXT_PUBLIC_URL          — explicit override (preview deploys, staging)
- *   2. PRODUCTION_URL           — any production build
- *   3. DEV_URL                  — local development, stays noindex
+ *   1. NEXT_PUBLIC_URL  — explicit override. The local .env sets this to
+ *      http://localhost:3000, which is what keeps dev builds noindex.
+ *   2. PRODUCTION_URL   — the default everywhere else, including deploys.
  *
- * Deliberately NOT falling back to VERCEL_PROJECT_PRODUCTION_URL: that
- * resolves to the *.vercel.app address, which would emit canonicals on a
- * second domain and split the site's ranking signals away from the custom one.
+ * Deliberately not keyed off NODE_ENV: this project's .env pins
+ * NODE_ENV="development", so it is not a reliable signal here. Deliberately
+ * not falling back to VERCEL_PROJECT_PRODUCTION_URL either — that resolves to
+ * the *.vercel.app address, which would emit canonicals on a second domain and
+ * split ranking signals away from the custom one.
  */
-export const siteUrl = (
-  process.env.NEXT_PUBLIC_URL ||
-  (process.env.NODE_ENV === 'production' ? PRODUCTION_URL : DEV_URL)
-).replace(/\/+$/, '');
+export const siteUrl = (process.env.NEXT_PUBLIC_URL || PRODUCTION_URL).replace(
+  /\/+$/,
+  '',
+);
 
 /** True once a real public origin is configured. Guards indexing directives. */
 export const isProductionUrl =
