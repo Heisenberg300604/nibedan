@@ -1,6 +1,9 @@
 import CSS from '@/components/technologies/CSS';
+import Dart from '@/components/technologies/Dart';
 import ExpressJs from '@/components/technologies/ExpressJs';
 import Figma from '@/components/technologies/Figma';
+import Flutter from '@/components/technologies/Flutter';
+import Git from '@/components/technologies/Git';
 import Github from '@/components/technologies/Github';
 import Html from '@/components/technologies/Html';
 import JavaScript from '@/components/technologies/JavaScript';
@@ -8,6 +11,7 @@ import MySQL from '@/components/technologies/MySQL';
 import NextJs from '@/components/technologies/NextJs';
 import NodeJs from '@/components/technologies/NodeJs';
 import PostgreSQL from '@/components/technologies/PostgreSQL';
+import Postman from '@/components/technologies/Postman';
 import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
 import ReactNative from '@/components/technologies/ReactNative';
@@ -39,6 +43,77 @@ export interface Experience {
 }
 
 export const experiences: Experience[] = [
+  {
+    isCurrent: true,
+    company: 'Veersa Technologies',
+    position: 'Software Engineer',
+    location: 'Noida, Uttar Pradesh (On-site)',
+    image: '/company/veersa.png',
+    description: [
+      'Placed on campus as a full-time Software Engineer, contributing to production software development within the engineering team.',
+      'Working across automation engineering initiatives, building and maintaining automated workflows and test coverage to reduce manual effort and catch regressions earlier in the release cycle.',
+      'Collaborating with cross-functional teams on day-to-day delivery, following structured code review, version control and QA practices.',
+    ],
+    startDate: 'July 2026',
+    endDate: 'Present',
+    technologies: [
+      {
+        name: 'TypeScript',
+        href: 'https://typescriptlang.org/',
+        icon: <TypeScript />,
+      },
+      {
+        name: 'JavaScript',
+        href: 'https://javascript.com/',
+        icon: <JavaScript />,
+      },
+      { name: 'Node.js', href: 'https://nodejs.org/', icon: <NodeJs /> },
+      { name: 'Postman', href: 'https://postman.com/', icon: <Postman /> },
+      { name: 'Git', href: 'https://git-scm.com/', icon: <Git /> },
+      { name: 'GitHub', href: 'https://github.com/', icon: <Github /> },
+    ],
+    website: 'https://veersatech.com',
+  },
+  {
+    isCurrent: false,
+    company: 'Zaruri Papers',
+    position: 'Technology Intern',
+    location: 'Remote / Gurugram Office',
+    image: '/company/zaruripapers.png',
+    description: [
+      'Selected as a Technology Intern in the Engineering team, reporting directly to the Founder & CEO, and owned feature delivery across the mobile product from requirement breakdown to production release.',
+      'Built and shipped cross-platform mobile application features using Flutter and Dart, focusing on clean widget architecture, reusable components, responsive layouts, and smooth state-driven navigation.',
+      'Designed and integrated backend services with Node.js, TypeScript and Prisma ORM over a Supabase-hosted PostgreSQL database, modelling schemas, writing type-safe queries and handling secure authentication flows.',
+      'Tested, documented and debugged REST APIs with Postman, reducing integration issues between the mobile client and backend, and maintained a disciplined Git and GitHub workflow with feature branches and peer-reviewed pull requests.',
+    ],
+    startDate: 'June 2026',
+    endDate: 'August 2026',
+    technologies: [
+      { name: 'Flutter', href: 'https://flutter.dev/', icon: <Flutter /> },
+      { name: 'Dart', href: 'https://dart.dev/', icon: <Dart /> },
+      {
+        name: 'TypeScript',
+        href: 'https://typescriptlang.org/',
+        icon: <TypeScript />,
+      },
+      { name: 'Node.js', href: 'https://nodejs.org/', icon: <NodeJs /> },
+      {
+        name: 'JavaScript',
+        href: 'https://javascript.com/',
+        icon: <JavaScript />,
+      },
+      { name: 'Prisma', href: 'https://prisma.io/', icon: <Prisma /> },
+      { name: 'Supabase', href: 'https://supabase.com/', icon: <Supabase /> },
+      {
+        name: 'PostgreSQL',
+        href: 'https://postgresql.org/',
+        icon: <PostgreSQL />,
+      },
+      { name: 'Postman', href: 'https://postman.com/', icon: <Postman /> },
+      { name: 'Git', href: 'https://git-scm.com/', icon: <Git /> },
+      { name: 'GitHub', href: 'https://github.com/', icon: <Github /> },
+    ],
+  },
   {
     isCurrent: false,
     company: 'HiTouchCX',

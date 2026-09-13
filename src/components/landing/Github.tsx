@@ -23,13 +23,8 @@ type ContributionItem = {
 
 type GitHubContributionResponse = {
   date: string;
-  contributionCount: number;
-  contributionLevel:
-    | 'NONE'
-    | 'FIRST_QUARTILE'
-    | 'SECOND_QUARTILE'
-    | 'THIRD_QUARTILE'
-    | 'FOURTH_QUARTILE';
+  count: number;
+  level: number;
 };
 
 // Helper function to filter contributions to past year
@@ -55,51 +50,45 @@ export default function Github() {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `${githubConfig.apiUrl}/${githubConfig.username}.json`,
+          `${githubConfig.apiUrl}/${githubConfig.username}?y=last`,
         );
+
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+
         const data: { contributions?: unknown[] } = await response.json();
 
         if (data?.contributions && Array.isArray(data.contributions)) {
-          // Flatten the nested array structure
-          const flattenedContributions = data.contributions.flat();
-
-          // Convert contribution levels to numbers
-          const contributionLevelMap = {
-            NONE: 0,
-            FIRST_QUARTILE: 1,
-            SECOND_QUARTILE: 2,
-            THIRD_QUARTILE: 3,
-            FOURTH_QUARTILE: 4,
-          };
-
-          // Transform to the expected format
-          const validContributions = flattenedContributions
+          const validContributions = data.contributions
             .filter(
               (item: unknown): item is GitHubContributionResponse =>
                 typeof item === 'object' &&
                 item !== null &&
                 'date' in item &&
-                'contributionCount' in item &&
-                'contributionLevel' in item,
+                'count' in item &&
+                'level' in item,
             )
             .map((item: GitHubContributionResponse) => ({
               date: String(item.date),
-              count: Number(item.contributionCount || 0),
-              level: (contributionLevelMap[
-                item.contributionLevel as keyof typeof contributionLevelMap
-              ] || 0) as ContributionItem['level'],
+              count: Number(item.count || 0),
+              level: Math.min(
+                Math.max(Number(item.level) || 0, 0),
+                githubConfig.maxLevel,
+              ) as ContributionItem['level'],
             }));
 
           if (validContributions.length > 0) {
-            // Calculate total contributions
-            const total = validContributions.reduce(
+            // Filter to show only the past year
+            const filteredContributions = filterLastYear(validContributions);
+
+            // Calculate total contributions over the displayed range
+            const total = filteredContributions.reduce(
               (sum, item) => sum + item.count,
               0,
             );
-            setTotalContributions(total);
 
-            // Filter to show only the past year
-            const filteredContributions = filterLastYear(validContributions);
+            setTotalContributions(total);
             setContributions(filteredContributions);
           } else {
             setHasError(true);
