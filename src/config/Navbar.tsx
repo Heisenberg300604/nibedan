@@ -23,5 +23,9 @@ export const navbarConfig = {
       label: 'Hackathons',
       href: '/hackathons',
     },
+    {
+      label: 'Certifications',
+      href: '/certifications',
+    },
   ] as NavItem[],
 };

@@ -1,6 +1,7 @@
 import ExpressJs from '@/components/technologies/ExpressJs';
 import Firebase from '@/components/technologies/Firebase';
 import MongoDB from '@/components/technologies/MongoDB';
+import Motion from '@/components/technologies/Motion';
 import NextJs from '@/components/technologies/NextJs';
 import NodeJs from '@/components/technologies/NodeJs';
 import PostgreSQL from '@/components/technologies/PostgreSQL';
@@ -89,6 +90,26 @@ export const projects: Project[] = [
     live: 'https://offscript-drab.vercel.app/',
     details: false,
     projectDetailsPageSlug: '/projects/offscript',
+    isWorking: true,
+    statusLabel: 'Deployed',
+    category: 'web',
+  },
+  {
+    title: 'CodeSprint — Typing Practice for Developers',
+    description:
+      'MonkeyType for developers — practice real code snippets across 7 languages. Continuous session engine auto-loads the next snippet mid-flow, with a content-aware viewport, IDE-style Tab indentation, and live WPM/accuracy.',
+    image: '/project/CodeSprint.png',
+    link: 'https://code-sprint-sage.vercel.app/',
+    technologies: [
+      { name: 'React', icon: <ReactIcon key="react" /> },
+      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
+      { name: 'Tailwind CSS', icon: <TailwindCss key="tailwind" /> },
+      { name: 'Framer Motion', icon: <Motion key="motion" /> },
+    ],
+    github: 'https://github.com/Heisenberg300604/CodeSprint',
+    live: 'https://code-sprint-sage.vercel.app/',
+    details: false,
+    projectDetailsPageSlug: '/projects/codesprint',
     isWorking: true,
     statusLabel: 'Deployed',
     category: 'web',

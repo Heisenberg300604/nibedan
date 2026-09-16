@@ -8,8 +8,9 @@ import { ThemeToggleButton } from './ThemeSwitch';
 export default function Navbar() {
   return (
     <Container className="sticky top-0 z-20 rounded-md py-4 backdrop-blur-sm">
-      <div className="flex items-center justify-between px-6">
-        <div className="flex items-center justify-center gap-4">
+      <div className="flex items-center justify-between gap-3 px-2 sm:px-6">
+        {/* Wraps rather than overflowing once the item count outgrows a phone. */}
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm sm:text-base">
           {navbarConfig.navItems.map((item) => (
             <Link
               className="transition-all duration-300 ease-in-out hover:underline hover:decoration-2 hover:underline-offset-4"

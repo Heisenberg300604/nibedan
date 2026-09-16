@@ -158,6 +158,22 @@ export const pageMetadata: Record<string, PageMeta> = {
     twitterCard: 'summary_large_image',
   },
 
+  // Certifications page
+  '/certifications': {
+    title: `Certifications — ${identity.name}`,
+    description:
+      'AWS Certified Cloud Practitioner and AWS Certified AI Practitioner, plus assessed skill certificates — every credential listed with its verification link.',
+    keywords: [
+      'certifications',
+      'aws certified cloud practitioner',
+      'aws certified ai practitioner',
+      'hackerrank sql',
+      'credentials',
+    ],
+    ogImage: '/meta/projects.png',
+    twitterCard: 'summary_large_image',
+  },
+
   // LeetCode page
   '/leetcode': {
     title: `LeetCode Progress — ${identity.name}`,

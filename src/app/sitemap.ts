@@ -16,6 +16,7 @@ const staticRoutes: {
   { path: '/projects', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/work-experience', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/hackathons', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/certifications', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/resume', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/contact', changeFrequency: 'yearly', priority: 0.6 },
   { path: '/leetcode', changeFrequency: 'monthly', priority: 0.5 },
