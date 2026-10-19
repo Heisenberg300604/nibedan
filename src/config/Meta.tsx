@@ -66,6 +66,16 @@ export const pageMetadata: Record<string, PageMeta> = {
     twitterCard: 'summary',
   },
 
+  // Booking page
+  '/book': {
+    title: `Book a call with ${identity.name}`,
+    description:
+      'Schedule a 15 or 30 minute call with me. Pick a time that works for you, in your own timezone.',
+    keywords: ['book a call', 'schedule a meeting', 'hire', 'collaboration'],
+    ogImage: '/assets/logo.png',
+    twitterCard: 'summary',
+  },
+
   // Work Experience page
   '/work-experience': {
     title: `Work Experience — ${identity.name}`,

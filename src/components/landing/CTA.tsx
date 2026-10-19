@@ -80,6 +80,13 @@ export default function CTA({
             </div>
           </Link>
         </div>
+        <Link
+          href={ctaConfig.secondaryHref}
+          className="mt-4 block self-center text-center text-sm underline-offset-4 opacity-70 transition-opacity hover:underline hover:opacity-100"
+          onClick={handleButtonClick}
+        >
+          {ctaConfig.secondaryLinkText}
+        </Link>
       </div>
     </Container>
   );

@@ -28,4 +28,12 @@ export const navbarConfig = {
       href: '/certifications',
     },
   ] as NavItem[],
+  // Always visible (also on phones), so it is not part of the link list.
+  cta: {
+    label: 'Book a call',
+    href: '/book',
+  } as NavItem,
+  // Phones collapse the links into a menu, which also gets a way back home.
+  menuLabel: 'Menu',
+  homeItem: { label: 'Home', href: '/' } as NavItem,
 };

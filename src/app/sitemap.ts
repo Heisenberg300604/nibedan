@@ -19,6 +19,7 @@ const staticRoutes: {
   { path: '/certifications', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/resume', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/contact', changeFrequency: 'yearly', priority: 0.6 },
+  { path: '/book', changeFrequency: 'yearly', priority: 0.6 },
   { path: '/leetcode', changeFrequency: 'monthly', priority: 0.5 },
   { path: '/setup', changeFrequency: 'yearly', priority: 0.4 },
 ];

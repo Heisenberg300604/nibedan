@@ -8,6 +8,7 @@ import {
   getPageMetadata,
 } from '@/config/Meta';
 import { Metadata } from 'next';
+import { Link } from 'next-view-transitions';
 import React from 'react';
 
 export const metadata: Metadata = getMetadata('/contact');
@@ -35,6 +36,16 @@ export default function ContactPage() {
         {/* Contact Form */}
         <div className="mx-auto max-w-2xl">
           <ContactForm />
+          <p className="text-muted-foreground mt-6 text-center text-sm">
+            Prefer to talk?{' '}
+            <Link
+              href="/book"
+              className="text-foreground underline underline-offset-4"
+            >
+              Book a call
+            </Link>
+            .
+          </p>
         </div>
       </div>
     </Container>

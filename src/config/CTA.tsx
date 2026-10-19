@@ -14,6 +14,10 @@ export const ctaConfig = {
   linkText: 'Get in touch',
   href: '/contact',
 
+  // Secondary action: schedule a call instead of writing a message
+  secondaryLinkText: 'Book a call',
+  secondaryHref: '/book',
+
   // Pre-text message
   preText: "Hey, you scrolled this far, let's talk.",
 };
